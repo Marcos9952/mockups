@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Móvil · Configuración — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .menu-item { display: flex; align-items: center; gap: 12px; padding: 13px 4px; border-bottom: 1px solid var(--color-border); text-decoration: none; color: inherit; }
+  .menu-item:last-child { border-bottom: none; }
+  .menu-item .m-icon { font-size: 18px; width: 24px; text-align: center; }
+  .menu-item .m-label { flex: 1; font-size: 13.5px; font-weight: 600; }
+  .menu-item .m-arrow { color: var(--color-text-faint); }
+</style>
+</head>
+<body>
+  <div class="mock-banner">Panel Administrador · versión móvil · Configuración · <a href="../index.html">← índice</a></div>
+  <input type="checkbox" id="menu-toggle" class="mobile-drawer-toggle">
+  <div class="phone-shell">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <label for="menu-toggle" class="drawer-overlay"></label>
+      <div class="drawer-panel">
+        <div class="dp-head">
+          <div class="avatar">A</div>
+          <div>
+            <div class="dp-name">Admin Nacional</div>
+            <div class="dp-role">admin@aguaya.pe</div>
+          </div>
+          <label for="menu-toggle" class="dp-close">✕</label>
+        </div>
+        <nav>
+          <a href="dashboard.html"><span class="icon">📊</span>Dashboard</a>
+          <a href="sedes.html"><span class="icon">🏢</span>Sedes</a>
+          <a href="repartidores.html"><span class="icon">🛵</span>Repartidores</a>
+          <a href="clientes.html"><span class="icon">👥</span>Clientes</a>
+          <a href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
+          <a href="pagos.html"><span class="icon">💳</span>Pagos</a>
+          <a href="chat.html"><span class="icon">💬</span>Chat</a>
+          <a href="reportes.html"><span class="icon">📈</span>Reportes</a>
+          <a class="active" href="configuracion.html"><span class="icon">⚙️</span>Configuración</a>
+        </nav>
+        <div class="dp-divider"></div>
+        <a class="dp-logout" href="login.html"><span class="icon">🚪</span>Cerrar sesión</a>
+      </div>
+      <div class="phone-statusbar"><span>9:41</span><span>🔋 100%</span></div>
+      <div class="phone-body">
+        <div class="app-header">
+          <label for="menu-toggle" class="drawer-hamburger">☰</label>
+          <h1>Configuración</h1>
+          <div class="avatar">A</div>
+        </div>
+
+        <div class="app-content" style="padding-bottom:90px;">
+          <div class="card" style="padding:6px 14px;">
+            <a class="menu-item" href="catalogo.html">
+              <span class="m-icon">🧴</span>
+              <span class="m-label">Catálogo y precios</span>
+              <span class="m-arrow">›</span>
+            </a>
+            <a class="menu-item" href="usuarios.html">
+              <span class="m-icon">👤</span>
+              <span class="m-label">Usuarios y roles</span>
+              <span class="m-arrow">›</span>
+            </a>
+            <a class="menu-item" href="reglas-asignacion.html">
+              <span class="m-icon">📍</span>
+              <span class="m-label">Reglas de asignación</span>
+              <span class="m-arrow">›</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="bottom-nav">
+          <a href="dashboard.html"><span class="icon">📊</span>Dashboard</a>
+          <a href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
+          <a href="chat.html"><span class="icon">💬</span>Chat</a>
+          <a href="pagos.html"><span class="icon">💳</span>Pagos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

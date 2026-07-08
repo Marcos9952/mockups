@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Móvil · Clientes — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .cli-card { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+  .cli-card .c-info { flex: 1; min-width: 0; }
+  .cli-card .c-name { font-size: 13px; font-weight: 700; }
+  .cli-card .c-phone { font-size: 11px; color: var(--color-text-faint); }
+  .cli-card .c-meta { text-align: right; font-size: 11px; color: var(--color-text-muted); }
+</style>
+</head>
+<body>
+  <div class="mock-banner">Panel Administrador · versión móvil · Clientes (solo consulta) · <a href="../index.html">← índice</a></div>
+  <input type="checkbox" id="menu-toggle" class="mobile-drawer-toggle">
+  <div class="phone-shell">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <label for="menu-toggle" class="drawer-overlay"></label>
+      <div class="drawer-panel">
+        <div class="dp-head">
+          <div class="avatar">A</div>
+          <div>
+            <div class="dp-name">Admin Nacional</div>
+            <div class="dp-role">admin@aguaya.pe</div>
+          </div>
+          <label for="menu-toggle" class="dp-close">✕</label>
+        </div>
+        <nav>
+          <a href="dashboard.html"><span class="icon">📊</span>Dashboard</a>
+          <a href="sedes.html"><span class="icon">🏢</span>Sedes</a>
+          <a href="repartidores.html"><span class="icon">🛵</span>Repartidores</a>
+          <a class="active" href="clientes.html"><span class="icon">👥</span>Clientes</a>
+          <a href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
+          <a href="pagos.html"><span class="icon">💳</span>Pagos</a>
+          <a href="chat.html"><span class="icon">💬</span>Chat</a>
+          <a href="reportes.html"><span class="icon">📈</span>Reportes</a>
+          <a href="configuracion.html"><span class="icon">⚙️</span>Configuración</a>
+        </nav>
+        <div class="dp-divider"></div>
+        <a class="dp-logout" href="login.html"><span class="icon">🚪</span>Cerrar sesión</a>
+      </div>
+      <div class="phone-statusbar"><span>9:41</span><span>🔋 100%</span></div>
+      <div class="phone-body">
+        <div class="app-header">
+          <label for="menu-toggle" class="drawer-hamburger">☰</label>
+          <h1>Clientes</h1>
+          <div class="avatar">A</div>
+        </div>
+
+        <div class="app-content" style="padding-bottom:90px;">
+          <div class="flow-note">Solo consulta — los clientes se autorregistran desde la app.</div>
+
+          <input class="search-input" style="width:100%; margin-bottom:10px;" type="text" placeholder="🔍 Buscar cliente...">
+
+          <a class="card cli-card" href="cliente-detalle.html">
+            <div class="avatar" style="width:32px;height:32px;font-size:12px;">MT</div>
+            <div class="c-info">
+              <div class="c-name">María Fernanda Torres</div>
+              <div class="c-phone">987 654 321</div>
+            </div>
+            <div class="c-meta">18 pedidos<div>S/ 412.50</div></div>
+          </a>
+          <a class="card cli-card" href="cliente-detalle.html">
+            <div class="avatar" style="width:32px;height:32px;font-size:12px;">JS</div>
+            <div class="c-info">
+              <div class="c-name">Jorge Salinas</div>
+              <div class="c-phone">945 112 233</div>
+            </div>
+            <div class="c-meta">3 pedidos<div>S/ 64.00</div></div>
+          </a>
+          <a class="card cli-card" href="cliente-detalle.html">
+            <div class="avatar" style="width:32px;height:32px;font-size:12px;">AT</div>
+            <div class="c-info">
+              <div class="c-name">Ana Torres</div>
+              <div class="c-phone">912 334 556</div>
+            </div>
+            <div class="c-meta">7 pedidos<div>S/ 158.00</div></div>
+          </a>
+          <a class="card cli-card" href="cliente-detalle.html">
+            <div class="avatar" style="width:32px;height:32px;font-size:12px;">PV</div>
+            <div class="c-info">
+              <div class="c-name">Pedro Vega</div>
+              <div class="c-phone">998 776 554</div>
+            </div>
+            <div class="c-meta"><span class="badge badge-neutral">Bloqueado</span></div>
+          </a>
+        </div>
+
+        <div class="bottom-nav">
+          <a href="dashboard.html"><span class="icon">📊</span>Dashboard</a>
+          <a href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
+          <a href="chat.html"><span class="icon">💬</span>Chat</a>
+          <a href="pagos.html"><span class="icon">💳</span>Pagos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

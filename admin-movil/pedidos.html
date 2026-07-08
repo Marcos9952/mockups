@@ -14,13 +14,38 @@
 </head>
 <body>
   <div class="mock-banner">Panel Administrador · versión móvil · Pedidos que requieren acción · <a href="../index.html">← índice</a></div>
+  <input type="checkbox" id="menu-toggle" class="mobile-drawer-toggle">
   <div class="phone-shell">
     <div class="phone-frame">
       <div class="phone-notch"></div>
+      <label for="menu-toggle" class="drawer-overlay"></label>
+      <div class="drawer-panel">
+        <div class="dp-head">
+          <div class="avatar">A</div>
+          <div>
+            <div class="dp-name">Admin Nacional</div>
+            <div class="dp-role">admin@aguaya.pe</div>
+          </div>
+          <label for="menu-toggle" class="dp-close">✕</label>
+        </div>
+        <nav>
+          <a href="dashboard.html"><span class="icon">📊</span>Dashboard</a>
+          <a href="sedes.html"><span class="icon">🏢</span>Sedes</a>
+          <a href="repartidores.html"><span class="icon">🛵</span>Repartidores</a>
+          <a href="clientes.html"><span class="icon">👥</span>Clientes</a>
+          <a class="active" href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
+          <a href="pagos.html"><span class="icon">💳</span>Pagos</a>
+          <a href="chat.html"><span class="icon">💬</span>Chat</a>
+          <a href="reportes.html"><span class="icon">📈</span>Reportes</a>
+          <a href="configuracion.html"><span class="icon">⚙️</span>Configuración</a>
+        </nav>
+        <div class="dp-divider"></div>
+        <a class="dp-logout" href="login.html"><span class="icon">🚪</span>Cerrar sesión</a>
+      </div>
       <div class="phone-statusbar"><span>9:41</span><span>🔋 100%</span></div>
       <div class="phone-body">
         <div class="app-header">
-          <a class="back-btn" href="dashboard.html">←</a>
+          <label for="menu-toggle" class="drawer-hamburger">☰</label>
           <h1>Pedidos urgentes</h1>
           <div style="width:34px;"></div>
         </div>

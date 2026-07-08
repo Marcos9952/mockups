@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Móvil · Reportes — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .bar-chart { display: flex; align-items: flex-end; gap: 8px; height: 120px; padding: 16px 4px 0; }
+  .bar-chart .bar { flex: 1; background: var(--color-primary); border-radius: 5px 5px 0 0; position: relative; }
+  .bar-chart .bar .lbl { position: absolute; bottom: -18px; left: 0; right: 0; text-align: center; font-size: 9.5px; color: var(--color-text-faint); }
+  .rank-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--color-border); font-size: 12.5px; }
+  .rank-row:last-child { border-bottom: none; }
+</style>
+</head>
+<body>
+  <div class="mock-banner">Panel Administrador · versión móvil · Reportes y estadísticas · <a href="../index.html">← índice</a></div>
+  <input type="checkbox" id="menu-toggle" class="mobile-drawer-toggle">
+  <div class="phone-shell">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <label for="menu-toggle" class="drawer-overlay"></label>
+      <div class="drawer-panel">
+        <div class="dp-head">
+          <div class="avatar">A</div>
+          <div>
+            <div class="dp-name">Admin Nacional</div>
+            <div class="dp-role">admin@aguaya.pe</div>
+          </div>
+          <label for="menu-toggle" class="dp-close">✕</label>
+        </div>
+        <nav>
+          <a href="dashboard.html"><span class="icon">📊</span>Dashboard</a>
+          <a href="sedes.html"><span class="icon">🏢</span>Sedes</a>
+          <a href="repartidores.html"><span class="icon">🛵</span>Repartidores</a>
+          <a href="clientes.html"><span class="icon">👥</span>Clientes</a>
+          <a href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
+          <a href="pagos.html"><span class="icon">💳</span>Pagos</a>
+          <a href="chat.html"><span class="icon">💬</span>Chat</a>
+          <a class="active" href="reportes.html"><span class="icon">📈</span>Reportes</a>
+          <a href="configuracion.html"><span class="icon">⚙️</span>Configuración</a>
+        </nav>
+        <div class="dp-divider"></div>
+        <a class="dp-logout" href="login.html"><span class="icon">🚪</span>Cerrar sesión</a>
+      </div>
+      <div class="phone-statusbar"><span>9:41</span><span>🔋 100%</span></div>
+      <div class="phone-body">
+        <div class="app-header">
+          <label for="menu-toggle" class="drawer-hamburger">☰</label>
+          <h1>Reportes</h1>
+          <div class="avatar">A</div>
+        </div>
+
+        <div class="app-content" style="padding-bottom:90px;">
+          <select class="search-input" style="width:100%; margin-bottom:12px;"><option>Últimos 7 días</option><option>Últimos 30 días</option><option>Este mes</option></select>
+
+          <div class="card">
+            <div class="section-title" style="font-size:13px;">Ventas por día (S/)</div>
+            <div class="bar-chart">
+              <div class="bar" style="height:55%;"><span class="lbl">L</span></div>
+              <div class="bar" style="height:70%;"><span class="lbl">M</span></div>
+              <div class="bar" style="height:62%;"><span class="lbl">M</span></div>
+              <div class="bar" style="height:80%;"><span class="lbl">J</span></div>
+              <div class="bar" style="height:95%;"><span class="lbl">V</span></div>
+              <div class="bar" style="height:100%; background:var(--color-accent);"><span class="lbl">S</span></div>
+              <div class="bar" style="height:68%;"><span class="lbl">D</span></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="section-title" style="font-size:13px;">Sedes con más demanda</div>
+            <div class="rank-row"><span>Sede San Isidro</span><strong>S/ 9,840</strong></div>
+            <div class="rank-row"><span>Sede Surco</span><strong>S/ 8,120</strong></div>
+            <div class="rank-row"><span>Sede Trujillo Norte</span><strong>S/ 5,470</strong></div>
+            <div class="rank-row"><span>Sede Arequipa Centro</span><strong>S/ 4,690</strong></div>
+          </div>
+
+          <div class="card">
+            <div class="section-title" style="font-size:13px;">Tiempo de entrega promedio</div>
+            <div class="rank-row"><span>Sede San Isidro</span><span>19 min ✅</span></div>
+            <div class="rank-row"><span>Sede Surco</span><span>24 min ✅</span></div>
+            <div class="rank-row"><span>Sede Trujillo Norte</span><span>33 min ⚠️</span></div>
+          </div>
+
+          <span class="btn btn-outline btn-block">⬇ Exportar CSV</span>
+        </div>
+
+        <div class="bottom-nav">
+          <a href="dashboard.html"><span class="icon">📊</span>Dashboard</a>
+          <a href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
+          <a href="chat.html"><span class="icon">💬</span>Chat</a>
+          <a href="pagos.html"><span class="icon">💳</span>Pagos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

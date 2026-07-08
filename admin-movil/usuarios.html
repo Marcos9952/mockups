@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Móvil · Usuarios y roles — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .user-card { display: flex; align-items: center; gap: 10px; }
+  .user-card .u-info { flex: 1; min-width: 0; }
+  .user-card .u-name { font-size: 12.5px; font-weight: 700; }
+  .user-card .u-role { font-size: 11px; color: var(--color-text-faint); }
+</style>
+</head>
+<body>
+  <div class="mock-banner">Panel Administrador · versión móvil · Usuarios y roles · <a href="../index.html">← índice</a></div>
+  <div class="phone-shell">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-statusbar"><span>9:41</span><span>🔋 100%</span></div>
+      <div class="phone-body">
+        <div class="app-header">
+          <a class="back-btn" href="configuracion.html">←</a>
+          <h1>Usuarios y roles</h1>
+          <div style="width:34px;"></div>
+        </div>
+
+        <div class="app-content" style="padding-bottom:24px;">
+          <div class="flow-note">Aquí se registra cualquier usuario del sistema —admin, soporte o repartidor— asignando su rol.</div>
+
+          <select class="search-input" style="width:100%; margin-bottom:10px;"><option>Todos los roles</option><option>Administrador</option><option>Soporte</option><option>Repartidor</option></select>
+
+          <div class="card user-card">
+            <div class="u-info"><div class="u-name">admin@aguaya.pe</div><div class="u-role">Administrador nacional</div></div>
+            <a href="#" style="color:var(--color-primary); font-weight:700; font-size:12px;">Editar</a>
+          </div>
+          <div class="card user-card">
+            <div class="u-info"><div class="u-name">gerente.lima@aguaya.pe</div><div class="u-role">Administrador regional · Lima</div></div>
+            <a href="#" style="color:var(--color-primary); font-weight:700; font-size:12px;">Editar</a>
+          </div>
+          <div class="card user-card">
+            <div class="u-info"><div class="u-name">soporte@aguaya.pe</div><div class="u-role">Soporte / verificación de pagos</div></div>
+            <a href="#" style="color:var(--color-primary); font-weight:700; font-size:12px;">Editar</a>
+          </div>
+          <div class="card user-card">
+            <div class="avatar" style="width:26px;height:26px;font-size:11px;">CR</div>
+            <div class="u-info"><div class="u-name">Carlos Ramírez</div><div class="u-role"><span class="chip">Repartidor</span> Sede San Isidro</div></div>
+            <a href="#" style="color:var(--color-primary); font-weight:700; font-size:12px;">Editar</a>
+          </div>
+          <div class="card" style="text-align:center; font-size:11.5px; color:var(--color-text-faint);">
+            +155 repartidores más — filtra por rol "Repartidor"
+          </div>
+
+          <a class="btn btn-primary btn-block" style="margin-top:8px;" href="nuevo-usuario.html">＋ Nuevo usuario</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

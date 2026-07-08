@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Móvil · Reglas de asignación — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <div class="mock-banner">Panel Administrador · versión móvil · Reglas de asignación automática · <a href="../index.html">← índice</a></div>
+  <div class="phone-shell">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-statusbar"><span>9:41</span><span>🔋 100%</span></div>
+      <div class="phone-body">
+        <div class="app-header">
+          <a class="back-btn" href="configuracion.html">←</a>
+          <h1>Reglas de asignación</h1>
+          <div style="width:34px;"></div>
+        </div>
+
+        <div class="app-content" style="padding-bottom:24px;">
+          <div class="flow-note">Punto abierto (sección 7 del plan): confirmar si la regla considera solo distancia, o también stock y disponibilidad de repartidor.</div>
+
+          <div class="field">
+            <label>Criterio de "sede más cercana"</label>
+            <select>
+              <option>Solo distancia en línea recta</option>
+              <option>Distancia + stock disponible</option>
+              <option>Distancia + stock + repartidor disponible</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Radio máximo de cobertura por defecto (km)</label>
+            <input type="text" value="5">
+          </div>
+          <div class="field">
+            <label>Tiempo límite de respuesta de la sede (min)</label>
+            <input type="text" value="10">
+          </div>
+          <div class="field">
+            <label>Si vence el tiempo límite</label>
+            <select>
+              <option>Reasignar automáticamente a la siguiente sede más cercana</option>
+              <option>Notificar al administrador para reasignar manualmente</option>
+            </select>
+          </div>
+          <span class="btn btn-primary btn-block">Guardar reglas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

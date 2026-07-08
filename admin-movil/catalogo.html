@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Móvil · Catálogo y precios — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .prod-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--color-border); }
+  .prod-row:last-child { border-bottom: none; }
+  .prod-row .p-name { font-size: 13px; font-weight: 600; }
+  .prod-row .p-price { font-size: 12px; color: var(--color-text-muted); }
+</style>
+</head>
+<body>
+  <div class="mock-banner">Panel Administrador · versión móvil · Catálogo y precios · <a href="../index.html">← índice</a></div>
+  <div class="phone-shell">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-statusbar"><span>9:41</span><span>🔋 100%</span></div>
+      <div class="phone-body">
+        <div class="app-header">
+          <a class="back-btn" href="configuracion.html">←</a>
+          <h1>Catálogo y precios</h1>
+          <div style="width:34px;"></div>
+        </div>
+
+        <div class="app-content" style="padding-bottom:24px;">
+          <div class="chip" style="margin-bottom:10px;">Precios por sede: activado</div>
+
+          <div class="card">
+            <div class="prod-row">
+              <div><div class="p-name">Bidón 20L</div><div class="p-price">Base S/ 8.00</div></div>
+              <a href="#" style="color:var(--color-primary); font-weight:700; font-size:12.5px;">Editar</a>
+            </div>
+            <div class="prod-row">
+              <div><div class="p-name">Botella 2.5L</div><div class="p-price">Base S/ 3.50</div></div>
+              <a href="#" style="color:var(--color-primary); font-weight:700; font-size:12.5px;">Editar</a>
+            </div>
+            <div class="prod-row">
+              <div><div class="p-name">Pack x6 botellas</div><div class="p-price">Base S/ 15.00 · San Isidro S/ 15.50</div></div>
+              <a href="#" style="color:var(--color-primary); font-weight:700; font-size:12.5px;">Editar</a>
+            </div>
+            <div class="prod-row">
+              <div><div class="p-name">Dispensador</div><div class="p-price">Base S/ 120.00</div></div>
+              <a href="#" style="color:var(--color-primary); font-weight:700; font-size:12.5px;">Editar</a>
+            </div>
+          </div>
+
+          <span class="btn btn-secondary btn-block" style="margin-top:12px;">＋ Agregar producto</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

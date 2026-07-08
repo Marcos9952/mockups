@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Móvil · Nuevo usuario — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <div class="mock-banner">Panel Administrador · versión móvil · Nuevo usuario (con rol) · <a href="../index.html">← índice</a></div>
+  <div class="phone-shell">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-statusbar"><span>9:41</span><span>🔋 100%</span></div>
+      <div class="phone-body">
+        <div class="app-header">
+          <a class="back-btn" href="usuarios.html">←</a>
+          <h1>Nuevo usuario</h1>
+          <div style="width:34px;"></div>
+        </div>
+
+        <div class="app-content" style="padding-bottom:24px;">
+          <div class="field">
+            <label>Rol</label>
+            <select>
+              <option>Administrador nacional</option>
+              <option>Administrador regional</option>
+              <option>Soporte / verificación de pagos</option>
+              <option selected>Repartidor</option>
+            </select>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+            <div class="avatar" style="width:48px; height:48px; font-size:16px; background:var(--color-bg); color:var(--color-text-faint);">📷</div>
+            <span class="btn btn-outline btn-sm">Subir foto</span>
+          </div>
+
+          <div class="field">
+            <label>Nombres y apellidos</label>
+            <input type="text" placeholder="Ej. Diego Farfán Rojas">
+          </div>
+          <div class="field">
+            <label>Teléfono</label>
+            <input type="text" placeholder="987 654 321">
+          </div>
+          <div class="field">
+            <label>Correo</label>
+            <input type="text" placeholder="usuario@aguaya.pe">
+          </div>
+
+          <div class="flow-note" style="background:var(--color-primary-light); border-color:#bae6fd; color:var(--color-primary-dark);">
+            Campos adicionales — solo si el rol es <strong>Repartidor</strong>
+          </div>
+          <div class="field">
+            <label>DNI</label>
+            <input type="text" placeholder="72345678">
+          </div>
+          <div class="field">
+            <label>Sede asignada</label>
+            <select><option>Sede San Isidro</option><option>Sede Surco</option><option>Sede Arequipa Centro</option></select>
+          </div>
+          <div class="field">
+            <label>Tipo de vehículo</label>
+            <select><option>Moto</option><option>Bicicleta</option><option>A pie</option></select>
+          </div>
+          <div class="field">
+            <label>Documento de identidad</label>
+            <div style="border:1.5px dashed var(--color-border); border-radius:var(--radius-sm); padding:12px; text-align:center; font-size:12px; color:var(--color-text-faint);">
+              📎 Toca para subir
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Contraseña temporal</label>
+            <input type="password" placeholder="Se enviará por SMS/correo">
+          </div>
+
+          <div style="display:flex; gap:8px; margin-top:8px;">
+            <span class="btn btn-outline btn-block">Cancelar</span>
+            <span class="btn btn-primary btn-block">Guardar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

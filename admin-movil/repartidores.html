@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Móvil · Repartidores — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .rep-card { display: flex; align-items: center; gap: 10px; }
+  .rep-card .r-info { flex: 1; }
+  .rep-card .r-name { font-size: 13px; font-weight: 700; }
+  .rep-card .r-sede { font-size: 11px; color: var(--color-text-faint); }
+  .rep-card .r-meta { text-align: right; font-size: 11px; color: var(--color-text-muted); }
+</style>
+</head>
+<body>
+  <div class="mock-banner">Panel Administrador · versión móvil · Repartidores (solo consulta) · <a href="../index.html">← índice</a></div>
+  <input type="checkbox" id="menu-toggle" class="mobile-drawer-toggle">
+  <div class="phone-shell">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <label for="menu-toggle" class="drawer-overlay"></label>
+      <div class="drawer-panel">
+        <div class="dp-head">
+          <div class="avatar">A</div>
+          <div>
+            <div class="dp-name">Admin Nacional</div>
+            <div class="dp-role">admin@aguaya.pe</div>
+          </div>
+          <label for="menu-toggle" class="dp-close">✕</label>
+        </div>
+        <nav>
+          <a href="dashboard.html"><span class="icon">📊</span>Dashboard</a>
+          <a href="sedes.html"><span class="icon">🏢</span>Sedes</a>
+          <a class="active" href="repartidores.html"><span class="icon">🛵</span>Repartidores</a>
+          <a href="clientes.html"><span class="icon">👥</span>Clientes</a>
+          <a href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
+          <a href="pagos.html"><span class="icon">💳</span>Pagos</a>
+          <a href="chat.html"><span class="icon">💬</span>Chat</a>
+          <a href="reportes.html"><span class="icon">📈</span>Reportes</a>
+          <a href="configuracion.html"><span class="icon">⚙️</span>Configuración</a>
+        </nav>
+        <div class="dp-divider"></div>
+        <a class="dp-logout" href="login.html"><span class="icon">🚪</span>Cerrar sesión</a>
+      </div>
+      <div class="phone-statusbar"><span>9:41</span><span>🔋 100%</span></div>
+      <div class="phone-body">
+        <div class="app-header">
+          <label for="menu-toggle" class="drawer-hamburger">☰</label>
+          <h1>Repartidores</h1>
+          <div class="avatar">A</div>
+        </div>
+
+        <div class="app-content" style="padding-bottom:90px;">
+          <div class="flow-note">Solo consulta. Para registrar uno nuevo, ve a Configuración → Usuarios y roles.</div>
+
+          <input class="search-input" style="width:100%; margin-bottom:10px;" type="text" placeholder="🔍 Buscar repartidor...">
+
+          <div class="card rep-card">
+            <div class="avatar" style="width:32px;height:32px;font-size:12px;">CR</div>
+            <div class="r-info">
+              <div class="r-name">Carlos Ramírez</div>
+              <div class="r-sede">Sede San Isidro</div>
+            </div>
+            <div class="r-meta"><span class="badge badge-entregado">Disponible</span><div>4.9 ★</div></div>
+          </div>
+          <div class="card rep-card">
+            <div class="avatar" style="width:32px;height:32px;font-size:12px;">LM</div>
+            <div class="r-info">
+              <div class="r-name">Luis Mendoza</div>
+              <div class="r-sede">Sede San Isidro</div>
+            </div>
+            <div class="r-meta"><span class="badge badge-camino">En ruta</span><div>4.7 ★</div></div>
+          </div>
+          <div class="card rep-card">
+            <div class="avatar" style="width:32px;height:32px;font-size:12px;">RS</div>
+            <div class="r-info">
+              <div class="r-name">Rosa Salas</div>
+              <div class="r-sede">Sede Surco</div>
+            </div>
+            <div class="r-meta"><span class="badge badge-neutral">Desconectado</span><div>4.8 ★</div></div>
+          </div>
+          <div class="card rep-card">
+            <div class="avatar" style="width:32px;height:32px;font-size:12px; background:var(--color-bg); color:var(--color-text-faint);">—</div>
+            <div class="r-info">
+              <div class="r-name" style="color:var(--color-text-faint);">Sin repartidores</div>
+              <div class="r-sede">Sede Arequipa Centro</div>
+            </div>
+            <div class="r-meta"><span class="badge badge-incidencia">Sin cobertura</span></div>
+          </div>
+        </div>
+
+        <div class="bottom-nav">
+          <a href="dashboard.html"><span class="icon">📊</span>Dashboard</a>
+          <a href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
+          <a href="chat.html"><span class="icon">💬</span>Chat</a>
+          <a href="pagos.html"><span class="icon">💳</span>Pagos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
