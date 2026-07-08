@@ -476,7 +476,12 @@ table.data-table tbody tr:hover { background: var(--color-bg); }
   grid-template-columns: 1.4fr 1fr;
   gap: 20px;
   align-items: start;
+  min-width: 0;
 }
+/* Los grid items no se encogen por debajo del ancho de su contenido por defecto;
+   sin esto, una tabla ancha fuerza el overflow de toda la columna en vez de scrollear internamente. */
+.two-col > * { min-width: 0; }
+.admin-content { min-width: 0; }
 .chip {
   display: inline-block;
   padding: 3px 10px;
