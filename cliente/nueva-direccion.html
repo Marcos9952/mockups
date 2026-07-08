@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cliente · Nueva dirección — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .tag-chip { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border: 1.5px solid var(--color-border); border-radius: 999px; font-size: 12.5px; font-weight: 600; color: var(--color-text-muted); }
+  .tag-chip.selected { border-color: var(--color-primary); background: var(--color-primary-light); color: var(--color-primary-dark); }
+</style>
+</head>
+<body>
+  <div class="mock-banner">App Cliente · Agregar nueva dirección · <a href="../index.html">← índice</a></div>
+  <div class="phone-shell">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-statusbar"><span>9:41</span><span>🔋 100%</span></div>
+      <div class="phone-body">
+        <div class="app-header">
+          <a class="back-btn" href="direcciones.html">←</a>
+          <h1>Nueva dirección</h1>
+          <div style="width:34px;"></div>
+        </div>
+
+        <div class="app-content" style="padding-bottom:24px;">
+          <div class="map-placeholder" style="min-height:150px; margin-bottom:12px;">
+            <div class="pin" style="top:45%; left:50%;">📍</div>
+            Arrastra el mapa para ajustar el punto exacto
+          </div>
+          <span class="btn btn-secondary btn-sm btn-block" style="margin-bottom:16px;">📍 Usar mi ubicación actual</span>
+
+          <div class="field">
+            <label>Dirección</label>
+            <input type="text" placeholder="Buscar dirección...">
+          </div>
+          <div class="field">
+            <label>Referencia (opcional)</label>
+            <input type="text" placeholder="Ej. Depto 402, portón verde">
+          </div>
+
+          <div class="field">
+            <label>Guardar como</label>
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+              <span class="tag-chip">🏠 Casa</span>
+              <span class="tag-chip selected">🏢 Trabajo</span>
+              <span class="tag-chip">📍 Otro</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>Nombre de la dirección (si es "Otro")</label>
+            <input type="text" placeholder="Ej. Casa de mis papás">
+          </div>
+
+          <a class="btn btn-primary btn-block" style="margin-top:8px;" href="direcciones.html">Guardar dirección</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -8,13 +8,15 @@
 </head>
 <body>
   <div class="mock-banner">Panel Administrador · Pedidos en tiempo real y reasignación manual · <a href="../index.html">← índice</a></div>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
   <div class="admin-layout">
     <aside class="admin-sidebar">
-      <div class="brand">💧 AguaYa Admin</div>
+      <div class="brand">💧 AguaYa Admin <label for="nav-toggle" class="sidebar-close-btn">✕</label></div>
       <nav>
         <a href="dashboard.html"><span class="icon">📊</span>Dashboard</a>
         <a href="sedes.html"><span class="icon">🏢</span>Sedes</a>
         <a href="repartidores.html"><span class="icon">🛵</span>Repartidores</a>
+        <a href="clientes.html"><span class="icon">👥</span>Clientes</a>
         <a class="active" href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
         <a href="pagos.html"><span class="icon">💳</span>Pagos</a>
         <a href="chat.html"><span class="icon">💬</span>Chat</a>
@@ -23,9 +25,11 @@
       </nav>
       <div class="sidebar-foot">Sesión: admin@aguaya.pe<br>Rol: Administrador nacional</div>
     </aside>
+    <label for="nav-toggle" class="sidebar-overlay"></label>
 
     <main class="admin-main">
       <div class="admin-topbar">
+        <label for="nav-toggle" class="hamburger-btn">☰</label>
         <div>
           <h1>Pedidos</h1>
           <div class="breadcrumb">Vista nacional en tiempo real · mapa + tabla</div>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cliente · Mis direcciones — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .addr-card { display: flex; gap: 12px; align-items: flex-start; }
+  .addr-card .a-icon { font-size: 22px; }
+  .addr-card .a-info { flex: 1; }
+  .addr-card .a-tag { font-size: 12.5px; font-weight: 800; display:flex; align-items:center; gap:6px; }
+  .addr-card .a-line { font-size: 12px; color: var(--color-text-muted); margin-top: 2px; line-height:1.4; }
+  .default-chip { font-size: 10px; font-weight: 800; color: var(--color-primary-dark); background: var(--color-primary-light); padding: 2px 8px; border-radius: 999px; }
+</style>
+</head>
+<body>
+  <div class="mock-banner">App Cliente · Mis direcciones (múltiples, usadas al hacer el pedido) · <a href="../index.html">← índice</a></div>
+  <div class="phone-shell">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-statusbar"><span>9:41</span><span>🔋 100%</span></div>
+      <div class="phone-body">
+        <div class="app-header">
+          <a class="back-btn" href="perfil.html">←</a>
+          <h1>Mis direcciones</h1>
+          <div style="width:34px;"></div>
+        </div>
+
+        <div class="app-content" style="padding-bottom:90px;">
+          <div class="flow-note">Puedes guardar varias direcciones y elegir cuál usar cada vez que haces un pedido, sin tener que escribirla de nuevo.</div>
+
+          <div class="card">
+            <div class="addr-card">
+              <div class="a-icon">🏠</div>
+              <div class="a-info">
+                <div class="a-tag">Casa <span class="default-chip">Predeterminada</span></div>
+                <div class="a-line">Av. Los Álamos 123, San Isidro — depto 402<br>Ref: portón verde, frente al parque</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:8px; margin-top:10px;">
+              <span class="btn btn-outline btn-sm" style="flex:1;">Editar</span>
+              <span class="btn btn-outline btn-sm" style="flex:1; color:var(--color-danger);">Eliminar</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="addr-card">
+              <div class="a-icon">🏢</div>
+              <div class="a-info">
+                <div class="a-tag">Trabajo</div>
+                <div class="a-line">Av. Javier Prado Este 4200, Surco — piso 8<br>Ref: recepción, edificio Torre Azul</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:8px; margin-top:10px;">
+              <span class="btn btn-outline btn-sm" style="flex:1;">Editar</span>
+              <span class="btn btn-outline btn-sm" style="flex:1; color:var(--color-danger);">Eliminar</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="addr-card">
+              <div class="a-icon">📍</div>
+              <div class="a-info">
+                <div class="a-tag">Casa de mis papás</div>
+                <div class="a-line">Jr. Las Camelias 88, San Isidro<br>Ref: reja negra</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:8px; margin-top:10px;">
+              <span class="btn btn-outline btn-sm" style="flex:1;">Editar</span>
+              <span class="btn btn-outline btn-sm" style="flex:1; color:var(--color-danger);">Eliminar</span>
+            </div>
+          </div>
+
+          <a class="btn btn-secondary btn-block" style="margin-top:6px;" href="nueva-direccion.html">＋ Agregar nueva dirección</a>
+        </div>
+
+        <div class="bottom-nav">
+          <a href="catalogo.html"><span class="icon">🏠</span>Inicio</a>
+          <a href="historial.html"><span class="icon">📦</span>Mis pedidos</a>
+          <a class="active" href="perfil.html"><span class="icon">👤</span>Perfil</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

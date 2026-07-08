@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cliente · Dirección de entrega inicial — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .step-header { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
+  .step-header .back-btn { width: 34px; height: 34px; border-radius: 50%; background: var(--color-bg); display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0; }
+  .step-dots { display: flex; gap: 6px; }
+  .step-dots span { width: 22px; height: 4px; border-radius: 999px; background: var(--color-border); }
+  .step-dots span.done { background: var(--color-primary); }
+  .tag-chip { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border: 1.5px solid var(--color-border); border-radius: 999px; font-size: 12.5px; font-weight: 600; color: var(--color-text-muted); }
+  .tag-chip.selected { border-color: var(--color-primary); background: var(--color-primary-light); color: var(--color-primary-dark); }
+</style>
+</head>
+<body>
+  <div class="mock-banner">App Cliente · Registro — paso 3 de 3: dirección de entrega inicial · <a href="../index.html">← índice</a></div>
+  <div class="phone-shell">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-statusbar"><span>9:41</span><span>🔋 100%</span></div>
+      <div class="phone-body">
+        <div class="app-content">
+          <div class="step-header">
+            <a class="back-btn" href="verificacion.html">←</a>
+            <div class="step-dots"><span class="done"></span><span class="done"></span><span class="done"></span></div>
+          </div>
+
+          <h1 style="font-size:20px; margin:0 0 4px;">¿Dónde te entregamos?</h1>
+          <p style="color:var(--color-text-muted); font-size:13px; margin:0 0 16px;">Guarda tu dirección principal — luego podrás agregar más o cambiarla en cada pedido.</p>
+
+          <div class="map-placeholder" style="min-height:150px; margin-bottom:12px;">
+            <div class="pin" style="top:45%; left:50%;">📍</div>
+            Arrastra el mapa para ajustar el punto exacto
+          </div>
+          <span class="btn btn-secondary btn-sm btn-block" style="margin-bottom:16px;">📍 Usar mi ubicación actual</span>
+
+          <div class="field">
+            <label>Dirección</label>
+            <input type="text" value="Av. Los Álamos 123, San Isidro">
+          </div>
+          <div class="field">
+            <label>Referencia (opcional)</label>
+            <input type="text" placeholder="Ej. Depto 402, portón verde">
+          </div>
+
+          <div class="field">
+            <label>Guardar como</label>
+            <div style="display:flex; gap:8px;">
+              <span class="tag-chip selected">🏠 Casa</span>
+              <span class="tag-chip">🏢 Trabajo</span>
+              <span class="tag-chip">📍 Otro</span>
+            </div>
+          </div>
+
+          <a class="btn btn-primary btn-block" style="margin-top:8px;" href="catalogo.html">Guardar y empezar a pedir</a>
+
+          <div style="text-align:center; margin-top:16px; font-size:12.5px;">
+            <a href="catalogo.html" style="color:var(--color-text-muted);">Hacerlo más tarde</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cliente · Elegir dirección de entrega — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .addr-option { display: flex; gap: 12px; align-items: flex-start; padding: 14px; border: 1.5px solid var(--color-border); border-radius: var(--radius-md); margin-bottom: 10px; cursor: pointer; }
+  .addr-option.selected { border-color: var(--color-primary); background: var(--color-primary-light); }
+  .addr-option .a-icon { font-size: 20px; }
+  .addr-option .a-info { flex: 1; }
+  .addr-option .a-tag { font-size: 12.5px; font-weight: 800; }
+  .addr-option .a-line { font-size: 11.5px; color: var(--color-text-muted); margin-top: 2px; line-height: 1.4; }
+  .addr-option .a-radio { width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--color-border); flex-shrink: 0; margin-top: 2px; }
+  .addr-option.selected .a-radio { border-color: var(--color-primary); background: radial-gradient(circle, var(--color-primary) 0 40%, transparent 42%); }
+</style>
+</head>
+<body>
+  <div class="mock-banner">App Cliente · Elegir entre direcciones guardadas (checkout) · <a href="../index.html">← índice</a></div>
+  <div class="phone-shell">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-statusbar"><span>9:41</span><span>🔋 100%</span></div>
+      <div class="phone-body">
+        <div class="app-header">
+          <a class="back-btn" href="carrito.html">←</a>
+          <h1>¿Dónde te entregamos?</h1>
+          <div style="width:34px;"></div>
+        </div>
+
+        <div class="app-content" style="padding-bottom:24px;">
+          <div class="addr-option selected">
+            <div class="a-radio"></div>
+            <div class="a-icon">🏠</div>
+            <div class="a-info">
+              <div class="a-tag">Casa</div>
+              <div class="a-line">Av. Los Álamos 123, San Isidro — depto 402</div>
+            </div>
+          </div>
+
+          <div class="addr-option">
+            <div class="a-radio"></div>
+            <div class="a-icon">🏢</div>
+            <div class="a-info">
+              <div class="a-tag">Trabajo</div>
+              <div class="a-line">Av. Javier Prado Este 4200, Surco — piso 8</div>
+            </div>
+          </div>
+
+          <div class="addr-option">
+            <div class="a-radio"></div>
+            <div class="a-icon">📍</div>
+            <div class="a-info">
+              <div class="a-tag">Casa de mis papás</div>
+              <div class="a-line">Jr. Las Camelias 88, San Isidro</div>
+            </div>
+          </div>
+
+          <a class="btn btn-secondary btn-block" style="margin-top:6px;" href="nueva-direccion.html">＋ Agregar nueva dirección</a>
+
+          <a class="btn btn-primary btn-block" style="margin-top:18px;" href="carrito.html">Usar esta dirección</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cliente · Verificación de teléfono — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .step-header { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
+  .step-header .back-btn { width: 34px; height: 34px; border-radius: 50%; background: var(--color-bg); display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0; }
+  .step-dots { display: flex; gap: 6px; }
+  .step-dots span { width: 22px; height: 4px; border-radius: 999px; background: var(--color-border); }
+  .step-dots span.done { background: var(--color-primary); }
+  .otp-row { display: flex; gap: 8px; margin: 22px 0 8px; }
+  .otp-row input {
+    width: 100%; text-align: center; font-size: 20px; font-weight: 700;
+    padding: 12px 0; border: 1.5px solid var(--color-border); border-radius: var(--radius-sm);
+  }
+  .otp-row input:first-child { border-color: var(--color-primary); }
+</style>
+</head>
+<body>
+  <div class="mock-banner">App Cliente · Registro — paso 2 de 3: verificación de teléfono · <a href="../index.html">← índice</a></div>
+  <div class="phone-shell">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-statusbar"><span>9:41</span><span>🔋 100%</span></div>
+      <div class="phone-body">
+        <div class="app-content">
+          <div class="step-header">
+            <a class="back-btn" href="registro.html">←</a>
+            <div class="step-dots"><span class="done"></span><span class="done"></span><span></span></div>
+          </div>
+
+          <div style="text-align:center; margin-bottom:6px; font-size:40px;">📲</div>
+          <h1 style="font-size:20px; margin:0 0 4px; text-align:center;">Verifica tu número</h1>
+          <p style="color:var(--color-text-muted); font-size:13px; margin:0; text-align:center;">
+            Enviamos un código de 6 dígitos por SMS a<br><strong>+51 987 654 321</strong>
+          </p>
+
+          <div class="otp-row">
+            <input type="text" maxlength="1" value="4">
+            <input type="text" maxlength="1" value="8">
+            <input type="text" maxlength="1" value="2">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+          </div>
+
+          <p style="text-align:center; font-size:12px; color:var(--color-text-faint); margin-bottom:22px;">
+            ¿No te llegó? Reenviar código en <strong>00:28</strong>
+          </p>
+
+          <a class="btn btn-primary btn-block" href="ubicacion-inicial.html">Verificar y continuar</a>
+
+          <div style="text-align:center; margin-top:18px; font-size:13px;">
+            <a href="registro.html" style="color:var(--color-text-muted);">Corregir número de teléfono</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

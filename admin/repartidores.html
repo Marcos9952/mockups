@@ -8,13 +8,15 @@
 </head>
 <body>
   <div class="mock-banner">Panel Administrador · Gestión de repartidores por sede · <a href="../index.html">← índice</a></div>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
   <div class="admin-layout">
     <aside class="admin-sidebar">
-      <div class="brand">💧 AguaYa Admin</div>
+      <div class="brand">💧 AguaYa Admin <label for="nav-toggle" class="sidebar-close-btn">✕</label></div>
       <nav>
         <a href="dashboard.html"><span class="icon">📊</span>Dashboard</a>
         <a href="sedes.html"><span class="icon">🏢</span>Sedes</a>
         <a class="active" href="repartidores.html"><span class="icon">🛵</span>Repartidores</a>
+        <a href="clientes.html"><span class="icon">👥</span>Clientes</a>
         <a href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
         <a href="pagos.html"><span class="icon">💳</span>Pagos</a>
         <a href="chat.html"><span class="icon">💬</span>Chat</a>
@@ -23,9 +25,11 @@
       </nav>
       <div class="sidebar-foot">Sesión: admin@aguaya.pe<br>Rol: Administrador nacional</div>
     </aside>
+    <label for="nav-toggle" class="sidebar-overlay"></label>
 
     <main class="admin-main">
       <div class="admin-topbar">
+        <label for="nav-toggle" class="hamburger-btn">☰</label>
         <div>
           <h1>Repartidores</h1>
           <div class="breadcrumb">156 repartidores activos en 24 sedes</div>
@@ -34,11 +38,15 @@
       </div>
 
       <div class="admin-content">
+        <div class="flow-note">
+          Esta pantalla es solo de consulta: lista y estado de los repartidores. Para registrar uno nuevo o cambiar su rol, ve a <a href="configuracion.html" style="color:#92400e; font-weight:700;">Configuración → Usuarios y roles</a>.
+        </div>
+
         <div class="toolbar">
           <input class="search-input" type="text" placeholder="🔍 Buscar repartidor...">
           <div style="display:flex; gap:8px;">
             <select class="search-input" style="min-width:160px;"><option>Todas las sedes</option><option>Sede San Isidro</option><option>Sede Surco</option></select>
-            <span class="btn btn-primary">＋ Nuevo repartidor</span>
+            <a href="configuracion.html" class="btn btn-primary">＋ Registrar repartidor</a>
           </div>
         </div>
 
@@ -71,7 +79,7 @@
               <td>Sede Arequipa Centro</td>
               <td><span class="badge badge-incidencia">Sede sin cobertura</span></td>
               <td>—</td><td>—</td>
-              <td><a href="#" style="color:var(--color-primary); font-weight:700;">Asignar</a></td>
+              <td><a href="configuracion.html" style="color:var(--color-primary); font-weight:700;">Registrar</a></td>
             </tr>
           </tbody>
         </table>

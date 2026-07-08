@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cliente · Mi perfil — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .menu-item { display: flex; align-items: center; gap: 12px; padding: 13px 4px; border-bottom: 1px solid var(--color-border); }
+  .menu-item:last-child { border-bottom: none; }
+  .menu-item .m-icon { font-size: 18px; width: 24px; text-align: center; }
+  .menu-item .m-label { flex: 1; font-size: 13.5px; font-weight: 600; }
+  .menu-item .m-arrow { color: var(--color-text-faint); }
+</style>
+</head>
+<body>
+  <div class="mock-banner">App Cliente · Mi perfil y datos personales · <a href="../index.html">← índice</a></div>
+  <div class="phone-shell">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-statusbar"><span>9:41</span><span>🔋 100%</span></div>
+      <div class="phone-body">
+        <div class="app-header">
+          <a class="back-btn" href="catalogo.html">←</a>
+          <h1>Mi perfil</h1>
+          <div style="width:34px;"></div>
+        </div>
+
+        <div class="app-content" style="padding-bottom:90px;">
+          <div class="card" style="text-align:center;">
+            <div class="avatar" style="width:64px; height:64px; font-size:22px; margin:0 auto 10px;">M</div>
+            <div style="font-weight:800; font-size:15px;">María Fernanda Torres</div>
+            <div style="font-size:12px; color:var(--color-text-muted); margin-top:2px;">Cliente desde marzo 2025</div>
+            <span class="btn btn-outline btn-sm" style="margin-top:12px;">Editar foto</span>
+          </div>
+
+          <div class="card">
+            <div class="field">
+              <label>Nombres y apellidos</label>
+              <input type="text" value="María Fernanda Torres">
+            </div>
+            <div class="field">
+              <label>Teléfono</label>
+              <input type="text" value="987 654 321">
+            </div>
+            <div class="field">
+              <label>Correo</label>
+              <input type="text" value="maria.torres@correo.com">
+            </div>
+            <span class="btn btn-primary btn-block btn-sm">Guardar cambios</span>
+          </div>
+
+          <div class="card" style="padding:6px 14px;">
+            <a class="menu-item" href="direcciones.html" style="text-decoration:none; color:inherit;">
+              <span class="m-icon">📍</span>
+              <span class="m-label">Mis direcciones <span style="color:var(--color-text-faint); font-weight:500;">(3 guardadas)</span></span>
+              <span class="m-arrow">›</span>
+            </a>
+            <a class="menu-item" href="historial.html" style="text-decoration:none; color:inherit;">
+              <span class="m-icon">📦</span>
+              <span class="m-label">Historial de pedidos</span>
+              <span class="m-arrow">›</span>
+            </a>
+            <a class="menu-item" href="#" style="text-decoration:none; color:inherit;">
+              <span class="m-icon">💳</span>
+              <span class="m-label">Métodos de pago</span>
+              <span class="m-arrow">›</span>
+            </a>
+            <a class="menu-item" href="#" style="text-decoration:none; color:inherit;">
+              <span class="m-icon">🔔</span>
+              <span class="m-label">Notificaciones</span>
+              <span class="m-arrow">›</span>
+            </a>
+            <a class="menu-item" href="#" style="text-decoration:none; color:inherit;">
+              <span class="m-icon">❓</span>
+              <span class="m-label">Ayuda y soporte</span>
+              <span class="m-arrow">›</span>
+            </a>
+          </div>
+
+          <a class="btn btn-outline btn-block" style="margin-top:6px; color:var(--color-danger); border-color:var(--color-danger-bg);" href="login.html">Cerrar sesión</a>
+        </div>
+
+        <div class="bottom-nav">
+          <a href="catalogo.html"><span class="icon">🏠</span>Inicio</a>
+          <a href="historial.html"><span class="icon">📦</span>Mis pedidos</a>
+          <a class="active" href="perfil.html"><span class="icon">👤</span>Perfil</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
