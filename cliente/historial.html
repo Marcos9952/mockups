@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cliente · Historial — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .order-row { display: flex; align-items: center; gap: 12px; }
+  .order-row .p-img { font-size: 26px; }
+  .order-row .info { flex: 1; }
+  .order-row .info .id { font-size: 13px; font-weight: 700; }
+  .order-row .info .meta { font-size: 11.5px; color: var(--color-text-muted); margin-top: 2px; }
+  .stars { color: #f59e0b; font-size: 13px; letter-spacing: 1px; margin-top: 6px; }
+  .order-link { display: block; text-decoration: none; color: inherit; }
+</style>
+</head>
+<body>
+  <div class="mock-banner">App Cliente · Historial de pedidos y calificación · <a href="../index.html">← índice</a></div>
+  <div class="phone-shell">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-statusbar"><span>9:41</span><span>🔋 100%</span></div>
+      <div class="phone-body">
+        <div class="app-header">
+          <h1>Mis pedidos</h1>
+          <div class="avatar">M</div>
+        </div>
+
+        <div class="app-content" style="padding-bottom:90px;">
+          <div class="flow-note">
+            Aquí ves todos tus pedidos, activos y pasados. Toca un pedido pendiente o en camino para ver su seguimiento en detalle; también puedes chatear o llamar directamente al repartidor asignado sin entrar al detalle.
+          </div>
+
+          <div class="card">
+            <a class="order-link" href="seguimiento.html">
+              <div class="order-row">
+                <div class="p-img">🪣</div>
+                <div class="info">
+                  <div class="id">Pedido #A-10452</div>
+                  <div class="meta">Hoy, 10:02 a.m. · Sede San Isidro · S/ 22.50</div>
+                </div>
+                <span class="badge badge-camino">En camino</span>
+              </div>
+              <div style="font-size:11.5px; color:var(--color-text-muted); margin-top:8px;">Repartidor: Carlos Ramírez · toca para ver seguimiento →</div>
+            </a>
+            <div style="display:flex; gap:8px; margin-top:8px;">
+              <a class="btn btn-secondary btn-sm" style="flex:1;" href="chat.html">💬 Chatear</a>
+              <a class="btn btn-outline btn-sm" style="flex:1;" href="tel:+51987654321">📞 Llamar</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <a class="order-link" href="seguimiento.html">
+              <div class="order-row">
+                <div class="p-img">🧴</div>
+                <div class="info">
+                  <div class="id">Pedido #A-10454</div>
+                  <div class="meta">Hoy, 9:15 a.m. · Sede Surco · S/ 18.00</div>
+                </div>
+                <span class="badge badge-asignado">Asignado</span>
+              </div>
+              <div style="font-size:11.5px; color:var(--color-text-muted); margin-top:8px;">Repartidor: Rosa Salas · toca para ver seguimiento →</div>
+            </a>
+            <div style="display:flex; gap:8px; margin-top:8px;">
+              <a class="btn btn-secondary btn-sm" style="flex:1;" href="chat.html">💬 Chatear</a>
+              <a class="btn btn-outline btn-sm" style="flex:1;" href="tel:+51998877665">📞 Llamar</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="order-row">
+              <div class="p-img">📦</div>
+              <div class="info">
+                <div class="id">Pedido #A-10398</div>
+                <div class="meta">02 Jul, 4:20 p.m. · Sede San Isidro · S/ 15.00</div>
+              </div>
+              <span class="badge badge-entregado">Entregado</span>
+            </div>
+            <div class="stars">★★★★★ <span style="color:var(--color-text-faint); font-size:11px;">— calificado</span></div>
+          </div>
+
+          <div class="card">
+            <div class="order-row">
+              <div class="p-img">🧴</div>
+              <div class="info">
+                <div class="id">Pedido #A-10210</div>
+                <div class="meta">27 Jun, 9:10 a.m. · Sede San Isidro · S/ 26.00</div>
+              </div>
+              <span class="badge badge-entregado">Entregado</span>
+            </div>
+            <a class="btn btn-outline btn-sm btn-block" style="margin-top:10px;" href="#">Calificar servicio</a>
+          </div>
+
+          <div class="card">
+            <div class="order-row">
+              <div class="p-img">🪣</div>
+              <div class="info">
+                <div class="id">Pedido #A-10088</div>
+                <div class="meta">14 Jun, 6:45 p.m. · Sede San Isidro · S/ 16.00</div>
+              </div>
+              <span class="badge badge-rechazado">Cancelado</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-nav">
+          <a href="catalogo.html"><span class="icon">🏠</span>Inicio</a>
+          <a class="active" href="historial.html"><span class="icon">📦</span>Mis pedidos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

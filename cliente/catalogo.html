@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cliente · Catálogo — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .location-bar {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--color-primary-light); color: var(--color-primary-dark);
+    padding: 10px 14px; border-radius: var(--radius-sm); font-size: 12.5px; font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .product-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 12px; text-align: center; }
+  .product-card .p-img { font-size: 34px; margin-bottom: 8px; }
+  .product-card .p-name { font-size: 12.5px; font-weight: 700; }
+  .product-card .p-price { font-size: 13px; color: var(--color-primary-dark); font-weight: 800; margin: 4px 0 8px; }
+  .cat-scroll { display: flex; gap: 8px; overflow-x: auto; margin-bottom: 16px; padding-bottom: 4px; }
+  .cat-pill { flex-shrink: 0; padding: 7px 14px; border-radius: 999px; background: var(--color-bg); font-size: 12px; font-weight: 600; color: var(--color-text-muted); }
+  .cat-pill.active { background: var(--color-primary); color: #fff; }
+  .fab-cart {
+    position: absolute; bottom: 78px; right: 18px;
+    width: 52px; height: 52px; border-radius: 50%;
+    background: var(--color-primary); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; box-shadow: var(--shadow-lg); z-index: 4;
+  }
+  .fab-cart .count {
+    position: absolute; top: -4px; right: -4px;
+    background: var(--color-danger); color: #fff; font-size: 10px; font-weight: 700;
+    width: 18px; height: 18px; border-radius: 50%; display:flex; align-items:center; justify-content:center;
+  }
+</style>
+</head>
+<body>
+  <div class="mock-banner">App Cliente · Catálogo y ubicación · <a href="../index.html">← índice</a></div>
+  <div class="phone-shell">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-statusbar"><span>9:41</span><span>🔋 100%</span></div>
+      <div class="phone-body">
+        <div class="app-header">
+          <div>
+            <h1>Hola, María 👋</h1>
+            <div class="app-header-sub">¿Qué necesitas hoy?</div>
+          </div>
+          <div class="avatar">M</div>
+        </div>
+
+        <div class="app-content" style="position:relative; padding-bottom:90px;">
+          <div class="location-bar">
+            📍 Entregar en: Av. Los Álamos 123, San Isidro
+            <a href="#" style="margin-left:auto; font-weight:800;">Cambiar</a>
+          </div>
+
+          <div class="cat-scroll">
+            <div class="cat-pill active">Todos</div>
+            <div class="cat-pill">Bidones 20L</div>
+            <div class="cat-pill">Botellas</div>
+            <div class="cat-pill">Packs</div>
+            <div class="cat-pill">Dispensadores</div>
+          </div>
+
+          <div class="product-grid">
+            <div class="product-card">
+              <div class="p-img">🪣</div>
+              <div class="p-name">Bidón 20L</div>
+              <div class="p-price">S/ 8.00</div>
+              <a class="btn btn-secondary btn-sm btn-block" href="carrito.html">Agregar</a>
+            </div>
+            <div class="product-card">
+              <div class="p-img">🧴</div>
+              <div class="p-name">Botella 2.5L</div>
+              <div class="p-price">S/ 3.50</div>
+              <a class="btn btn-secondary btn-sm btn-block" href="carrito.html">Agregar</a>
+            </div>
+            <div class="product-card">
+              <div class="p-img">📦</div>
+              <div class="p-name">Pack x6 botellas</div>
+              <div class="p-price">S/ 15.00</div>
+              <a class="btn btn-secondary btn-sm btn-block" href="carrito.html">Agregar</a>
+            </div>
+            <div class="product-card">
+              <div class="p-img">🚰</div>
+              <div class="p-name">Dispensador</div>
+              <div class="p-price">S/ 120.00</div>
+              <a class="btn btn-secondary btn-sm btn-block" href="carrito.html">Agregar</a>
+            </div>
+          </div>
+
+          <p style="font-size:11px; color:var(--color-text-faint); margin-top:16px; text-align:center;">
+            Precios de la sede más cercana a tu ubicación: <strong>Sede San Isidro</strong>
+          </p>
+
+          <a class="fab-cart" href="carrito.html">🛒<span class="count">2</span></a>
+        </div>
+
+        <div class="bottom-nav">
+          <a class="active" href="catalogo.html"><span class="icon">🏠</span>Inicio</a>
+          <a href="historial.html"><span class="icon">📦</span>Mis pedidos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

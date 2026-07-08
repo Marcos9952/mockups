@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin · Chat con repartidores — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .chat-shell {
+    display: flex;
+    height: calc(100vh - 160px);
+    min-height: 520px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+  .contact-list { width: 300px; flex-shrink: 0; border-right: 1px solid var(--color-border); display: flex; flex-direction: column; }
+  .contact-search { padding: 14px; border-bottom: 1px solid var(--color-border); }
+  .contact-search input { width: 100%; padding: 9px 12px; border: 1.5px solid var(--color-border); border-radius: 999px; font-size: 13px; }
+  .contact-scroll { flex: 1; overflow-y: auto; }
+  .contact-item {
+    display: flex; align-items: center; gap: 10px; padding: 12px 14px;
+    border-bottom: 1px solid var(--color-border); cursor: pointer;
+  }
+  .contact-item:hover { background: var(--color-bg); }
+  .contact-item.active { background: var(--color-primary-light); }
+  .contact-item .c-info { flex: 1; min-width: 0; }
+  .contact-item .c-name { font-size: 13px; font-weight: 700; display:flex; align-items:center; gap:6px; }
+  .contact-item .c-sede { font-size: 10.5px; color: var(--color-text-faint); }
+  .contact-item .c-last { font-size: 11.5px; color: var(--color-text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
+  .contact-item .c-meta { text-align: right; flex-shrink: 0; }
+  .contact-item .c-time { font-size: 10px; color: var(--color-text-faint); }
+  .unread-dot {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 18px; height: 18px; border-radius: 999px; background: var(--color-primary);
+    color: #fff; font-size: 10px; font-weight: 800; margin-top: 4px; padding: 0 5px;
+  }
+  .online-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; flex-shrink: 0; }
+
+  .conv-panel { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+  .conv-header { display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-bottom: 1px solid var(--color-border); }
+  .conv-header .c-name { font-size: 14px; font-weight: 700; }
+  .conv-header .c-status { font-size: 11.5px; color: var(--color-text-muted); }
+  .conv-messages { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 10px; background: var(--color-bg); }
+  .msg { max-width: 60%; padding: 10px 14px; border-radius: 16px; font-size: 13px; line-height: 1.45; }
+  .msg.in { align-self: flex-start; background: var(--color-surface); border: 1px solid var(--color-border); border-bottom-left-radius: 4px; }
+  .msg.out { align-self: flex-end; background: var(--color-primary); color: #fff; border-bottom-right-radius: 4px; }
+  .msg-time { font-size: 10px; color: var(--color-text-faint); margin-top: 3px; }
+  .conv-input-bar { display: flex; gap: 10px; padding: 14px 18px; border-top: 1px solid var(--color-border); background: var(--color-surface); }
+  .conv-input-bar input { flex: 1; border: 1.5px solid var(--color-border); border-radius: 999px; padding: 10px 16px; font-size: 13px; }
+  .conv-input-bar button { width: 40px; height: 40px; border-radius: 50%; background: var(--color-primary); color: #fff; border: none; font-size: 15px; flex-shrink: 0; }
+  .contact-tabs { display: flex; gap: 6px; padding: 10px 14px 0; }
+  .contact-tabs span { font-size: 11px; font-weight: 700; color: var(--color-text-muted); padding: 5px 10px; border-radius: 999px; background: var(--color-bg); }
+  .contact-tabs span.active { background: var(--color-primary); color: #fff; }
+</style>
+</head>
+<body>
+  <div class="mock-banner">Panel Administrador · Chat con repartidores (estilo WhatsApp) · <a href="../index.html">← índice</a></div>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="brand">💧 AguaYa Admin</div>
+      <nav>
+        <a href="dashboard.html"><span class="icon">📊</span>Dashboard</a>
+        <a href="sedes.html"><span class="icon">🏢</span>Sedes</a>
+        <a href="repartidores.html"><span class="icon">🛵</span>Repartidores</a>
+        <a href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
+        <a href="pagos.html"><span class="icon">💳</span>Pagos</a>
+        <a class="active" href="chat.html"><span class="icon">💬</span>Chat</a>
+        <a href="reportes.html"><span class="icon">📈</span>Reportes</a>
+        <a href="configuracion.html"><span class="icon">⚙️</span>Configuración</a>
+      </nav>
+      <div class="sidebar-foot">Sesión: admin@aguaya.pe<br>Rol: Administrador nacional</div>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <div>
+          <h1>Chat con repartidores</h1>
+          <div class="breadcrumb">Comunicación directa administrador ↔ repartidor, como una lista de contactos</div>
+        </div>
+        <div class="profile"><div class="avatar">A</div> Admin</div>
+      </div>
+
+      <div class="admin-content">
+        <div class="chat-shell">
+          <div class="contact-list">
+            <div class="contact-search"><input type="text" placeholder="🔍 Buscar repartidor..."></div>
+            <div class="contact-tabs">
+              <span class="active">Todos</span>
+              <span>No leídos (2)</span>
+              <span>Sede San Isidro</span>
+            </div>
+            <div class="contact-scroll">
+              <div class="contact-item active">
+                <div class="avatar" style="width:38px; height:38px;">CR</div>
+                <div class="c-info">
+                  <div class="c-name"><span class="online-dot"></span>Carlos Ramírez</div>
+                  <div class="c-sede">Sede San Isidro</div>
+                  <div class="c-last">Ya llegué a dejar el pedido #A-10449</div>
+                </div>
+                <div class="c-meta">
+                  <div class="c-time">10:32</div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="avatar" style="width:38px; height:38px;">LM</div>
+                <div class="c-info">
+                  <div class="c-name"><span class="online-dot" style="background:var(--color-text-faint);"></span>Luis Mendoza</div>
+                  <div class="c-sede">Sede San Isidro</div>
+                  <div class="c-last">¿Puedo tomar mi descanso a las 2pm?</div>
+                </div>
+                <div class="c-meta">
+                  <div class="c-time">09:50</div>
+                  <div class="unread-dot">1</div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="avatar" style="width:38px; height:38px;">RS</div>
+                <div class="c-info">
+                  <div class="c-name"><span class="online-dot" style="background:var(--color-text-faint);"></span>Rosa Salas</div>
+                  <div class="c-sede">Sede Surco</div>
+                  <div class="c-last">Ok, gracias 👍</div>
+                </div>
+                <div class="c-meta">
+                  <div class="c-time">Ayer</div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="avatar" style="width:38px; height:38px;">DF</div>
+                <div class="c-info">
+                  <div class="c-name"><span class="online-dot"></span>Diego Farfán</div>
+                  <div class="c-sede">Sede San Isidro</div>
+                  <div class="c-last">El cliente no contesta el timbre, ¿qué hago?</div>
+                </div>
+                <div class="c-meta">
+                  <div class="c-time">Ayer</div>
+                  <div class="unread-dot">1</div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="avatar" style="width:38px; height:38px;">HT</div>
+                <div class="c-info">
+                  <div class="c-name"><span class="online-dot" style="background:var(--color-text-faint);"></span>Hugo Tello</div>
+                  <div class="c-sede">Sede San Isidro</div>
+                  <div class="c-last">Buenas, ya llegué a la sede</div>
+                </div>
+                <div class="c-meta">
+                  <div class="c-time">Lun</div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="avatar" style="width:38px; height:38px;">AA</div>
+                <div class="c-info">
+                  <div class="c-name"><span class="online-dot" style="background:var(--color-text-faint);"></span>Andrea Alva</div>
+                  <div class="c-sede">Sede Arequipa Centro</div>
+                  <div class="c-last">Entendido, quedo atenta</div>
+                </div>
+                <div class="c-meta">
+                  <div class="c-time">Lun</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="conv-panel">
+            <div class="conv-header">
+              <div class="avatar" style="width:38px; height:38px;">CR</div>
+              <div style="flex:1;">
+                <div class="c-name">Carlos Ramírez</div>
+                <div class="c-status">🟢 En línea · Sede San Isidro</div>
+              </div>
+              <span class="chip">Ver perfil de repartidor</span>
+            </div>
+
+            <div class="conv-messages">
+              <div>
+                <div class="msg in">Buenos días, ya estoy listo para empezar mis rutas del día</div>
+                <div class="msg-time">08:05</div>
+              </div>
+              <div>
+                <div class="msg out">Buen día Carlos, tienes 2 pedidos en el pool ahora mismo cerca de tu zona</div>
+                <div class="msg-time" style="text-align:right;">08:06</div>
+              </div>
+              <div>
+                <div class="msg in">Perfecto, ya los tomé 👍</div>
+                <div class="msg-time">08:07</div>
+              </div>
+              <div>
+                <div class="msg in">Ya llegué a dejar el pedido #A-10449</div>
+                <div class="msg-time">10:32</div>
+              </div>
+              <div>
+                <div class="msg out">Genial, gracias por avisar. Sigue con el #A-10446 cuando puedas</div>
+                <div class="msg-time" style="text-align:right;">10:33</div>
+              </div>
+            </div>
+
+            <div class="conv-input-bar">
+              <input type="text" placeholder="Escribe un mensaje...">
+              <button>➤</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

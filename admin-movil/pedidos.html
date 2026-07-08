@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Móvil · Pedidos urgentes — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .order-card { display: block; }
+  .order-card .top-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .order-card .id { font-weight: 800; font-size: 13.5px; }
+  .order-card .sub { font-size: 12px; color: var(--color-text-muted); margin-bottom: 6px; }
+</style>
+</head>
+<body>
+  <div class="mock-banner">Panel Administrador · versión móvil · Pedidos que requieren acción · <a href="../index.html">← índice</a></div>
+  <div class="phone-shell">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-statusbar"><span>9:41</span><span>🔋 100%</span></div>
+      <div class="phone-body">
+        <div class="app-header">
+          <a class="back-btn" href="dashboard.html">←</a>
+          <h1>Pedidos urgentes</h1>
+          <div style="width:34px;"></div>
+        </div>
+
+        <div class="app-content" style="padding-bottom:90px;">
+          <div class="flow-note">Vista resumida: solo pedidos sin sede, sin repartidor o con incidencia. Para ver todos los pedidos usa el panel web.</div>
+
+          <div class="card order-card" style="border-color:var(--color-danger);">
+            <div class="top-row">
+              <span class="id">#A-10399</span>
+              <span class="badge badge-incidencia">Sin sede</span>
+            </div>
+            <div class="sub">Jorge Salinas · fuera de radio de cobertura · S/ 16.00</div>
+            <div class="field" style="margin-bottom:8px;">
+              <label>Reasignar a sede</label>
+              <select><option>Sede San Isidro (4.2 km)</option><option>Sede Surco (6.1 km)</option><option>Sede Miraflores (7.8 km)</option></select>
+            </div>
+            <span class="btn btn-primary btn-block btn-sm">Confirmar reasignación</span>
+          </div>
+
+          <div class="card order-card">
+            <div class="top-row">
+              <span class="id">#A-10440</span>
+              <span class="badge badge-pendiente">Sin repartidor</span>
+            </div>
+            <div class="sub">Ana Torres · Sede Arequipa Centro · S/ 30.00</div>
+            <div class="field" style="margin-bottom:8px;">
+              <label>Asignar repartidor</label>
+              <select><option>Automático — el sistema asigna</option><option>Notificar a sede vecina</option></select>
+            </div>
+            <span class="btn btn-primary btn-block btn-sm">Confirmar</span>
+          </div>
+
+          <div class="card order-card">
+            <div class="top-row">
+              <span class="id">#A-10430</span>
+              <span class="badge badge-incidencia">Incidencia</span>
+            </div>
+            <div class="sub">Repartidor Carlos R. reportó: "cliente ausente" · Sede San Isidro</div>
+            <div style="display:flex; gap:8px;">
+              <span class="btn btn-outline btn-block btn-sm">Contactar cliente</span>
+              <span class="btn btn-danger btn-block btn-sm">Cancelar pedido</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-nav">
+          <a href="dashboard.html"><span class="icon">📊</span>Dashboard</a>
+          <a class="active" href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
+          <a href="chat.html"><span class="icon">💬</span>Chat</a>
+          <a href="pagos.html"><span class="icon">💳</span>Pagos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin · Sedes — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <div class="mock-banner">Panel Administrador · Gestión de sedes/puntos de abasto · <a href="../index.html">← índice</a></div>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="brand">💧 AguaYa Admin</div>
+      <nav>
+        <a href="dashboard.html"><span class="icon">📊</span>Dashboard</a>
+        <a class="active" href="sedes.html"><span class="icon">🏢</span>Sedes</a>
+        <a href="repartidores.html"><span class="icon">🛵</span>Repartidores</a>
+        <a href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
+        <a href="pagos.html"><span class="icon">💳</span>Pagos</a>
+        <a href="chat.html"><span class="icon">💬</span>Chat</a>
+        <a href="reportes.html"><span class="icon">📈</span>Reportes</a>
+        <a href="configuracion.html"><span class="icon">⚙️</span>Configuración</a>
+      </nav>
+      <div class="sidebar-foot">Sesión: admin@aguaya.pe<br>Rol: Administrador nacional</div>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <div>
+          <h1>Sedes / puntos de abasto</h1>
+          <div class="breadcrumb">26 sedes registradas a nivel nacional</div>
+        </div>
+        <div class="profile"><div class="avatar">A</div> Admin</div>
+      </div>
+
+      <div class="admin-content">
+        <div class="two-col">
+          <div>
+            <div class="toolbar">
+              <input class="search-input" type="text" placeholder="🔍 Buscar sede por nombre o ciudad...">
+              <span class="btn btn-primary">＋ Nueva sede</span>
+            </div>
+
+            <table class="data-table">
+              <thead><tr><th>Sede</th><th>Ciudad</th><th>Repartidores</th><th>Radio cobertura</th><th>Estado</th><th></th></tr></thead>
+              <tbody>
+                <tr style="background:var(--color-primary-light);">
+                  <td><strong>Sede San Isidro</strong></td><td>Lima</td><td>6</td><td>5 km</td>
+                  <td><span class="badge badge-entregado">Activa</span></td><td><a href="#" style="color:var(--color-primary); font-weight:700;">Editar</a></td>
+                </tr>
+                <tr>
+                  <td>Sede Surco</td><td>Lima</td><td>5</td><td>5 km</td>
+                  <td><span class="badge badge-entregado">Activa</span></td><td><a href="#" style="color:var(--color-primary); font-weight:700;">Editar</a></td>
+                </tr>
+                <tr>
+                  <td>Sede Arequipa Centro</td><td>Arequipa</td><td>0</td><td>6 km</td>
+                  <td><span class="badge badge-incidencia">Sin repartidores</span></td><td><a href="#" style="color:var(--color-primary); font-weight:700;">Editar</a></td>
+                </tr>
+                <tr>
+                  <td>Sede Trujillo Norte</td><td>Trujillo</td><td>3</td><td>6 km</td>
+                  <td><span class="badge badge-entregado">Activa</span></td><td><a href="#" style="color:var(--color-primary); font-weight:700;">Editar</a></td>
+                </tr>
+                <tr>
+                  <td>Sede Cusco Wanchaq</td><td>Cusco</td><td>2</td><td>5 km</td>
+                  <td><span class="badge badge-neutral">Inactiva</span></td><td><a href="#" style="color:var(--color-primary); font-weight:700;">Editar</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card">
+            <div class="section-title">Editar / nueva sede</div>
+            <div class="flow-note">Formulario de alta de sede — sección 2.3 y 2.4 del plan (registro con geolocalización).</div>
+
+            <div class="field">
+              <label>Nombre de la sede</label>
+              <input type="text" value="Sede San Isidro">
+            </div>
+            <div class="field">
+              <label>Ciudad / Departamento</label>
+              <input type="text" value="Lima — Lima">
+            </div>
+            <div class="field">
+              <label>Dirección</label>
+              <input type="text" value="Av. República de Panamá 3505">
+            </div>
+            <div class="map-placeholder" style="min-height:110px; margin-bottom:14px;">
+              <div class="pin" style="top:45%; left:50%;">📍</div>
+              Ubicar sede en el mapa
+            </div>
+            <div class="field">
+              <label>Radio de asignación automática (km)</label>
+              <input type="text" value="5">
+            </div>
+            <div class="field">
+              <label>Estado</label>
+              <select><option>Activa</option><option>Inactiva</option></select>
+            </div>
+            <div style="display:flex; gap:8px;">
+              <span class="btn btn-outline btn-block">Cancelar</span>
+              <span class="btn btn-primary btn-block">Guardar sede</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px;">
+          <div class="toolbar" style="margin-bottom:12px;">
+            <div class="section-title" style="margin:0;">Repartidores de Sede San Isidro (6)</div>
+            <a href="repartidores.html" style="font-size:12px; color:var(--color-primary); font-weight:700;">Ver todos en Repartidores →</a>
+          </div>
+          <table class="data-table">
+            <thead><tr><th>Repartidor</th><th>Estado</th><th>Entregas hoy</th><th>Calificación</th></tr></thead>
+            <tbody>
+              <tr>
+                <td style="display:flex; align-items:center; gap:8px;"><div class="avatar" style="width:26px;height:26px;font-size:11px;">CR</div>Carlos Ramírez</td>
+                <td><span class="badge badge-entregado">Disponible</span></td><td>7</td><td>4.9 ★</td>
+              </tr>
+              <tr>
+                <td style="display:flex; align-items:center; gap:8px;"><div class="avatar" style="width:26px;height:26px;font-size:11px;">LM</div>Luis Mendoza</td>
+                <td><span class="badge badge-camino">En ruta</span></td><td>5</td><td>4.7 ★</td>
+              </tr>
+              <tr>
+                <td style="display:flex; align-items:center; gap:8px;"><div class="avatar" style="width:26px;height:26px;font-size:11px;">DF</div>Diego Farfán</td>
+                <td><span class="badge badge-entregado">Disponible</span></td><td>6</td><td>4.8 ★</td>
+              </tr>
+              <tr>
+                <td style="display:flex; align-items:center; gap:8px;"><div class="avatar" style="width:26px;height:26px;font-size:11px;">NC</div>Nilda Cuadros</td>
+                <td><span class="badge badge-camino">En ruta</span></td><td>4</td><td>4.6 ★</td>
+              </tr>
+              <tr>
+                <td style="display:flex; align-items:center; gap:8px;"><div class="avatar" style="width:26px;height:26px;font-size:11px;">HT</div>Hugo Tello</td>
+                <td><span class="badge badge-neutral">Desconectado</span></td><td>0</td><td>4.5 ★</td>
+              </tr>
+              <tr>
+                <td style="display:flex; align-items:center; gap:8px;"><div class="avatar" style="width:26px;height:26px;font-size:11px;">EQ</div>Elena Quispe</td>
+                <td><span class="badge badge-entregado">Disponible</span></td><td>3</td><td>5.0 ★</td>
+              </tr>
+            </tbody>
+          </table>
+          <span class="btn btn-secondary btn-sm" style="margin-top:12px;">＋ Agregar repartidor a esta sede</span>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

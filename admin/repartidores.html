@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin · Repartidores — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <div class="mock-banner">Panel Administrador · Gestión de repartidores por sede · <a href="../index.html">← índice</a></div>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="brand">💧 AguaYa Admin</div>
+      <nav>
+        <a href="dashboard.html"><span class="icon">📊</span>Dashboard</a>
+        <a href="sedes.html"><span class="icon">🏢</span>Sedes</a>
+        <a class="active" href="repartidores.html"><span class="icon">🛵</span>Repartidores</a>
+        <a href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
+        <a href="pagos.html"><span class="icon">💳</span>Pagos</a>
+        <a href="chat.html"><span class="icon">💬</span>Chat</a>
+        <a href="reportes.html"><span class="icon">📈</span>Reportes</a>
+        <a href="configuracion.html"><span class="icon">⚙️</span>Configuración</a>
+      </nav>
+      <div class="sidebar-foot">Sesión: admin@aguaya.pe<br>Rol: Administrador nacional</div>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <div>
+          <h1>Repartidores</h1>
+          <div class="breadcrumb">156 repartidores activos en 24 sedes</div>
+        </div>
+        <div class="profile"><div class="avatar">A</div> Admin</div>
+      </div>
+
+      <div class="admin-content">
+        <div class="toolbar">
+          <input class="search-input" type="text" placeholder="🔍 Buscar repartidor...">
+          <div style="display:flex; gap:8px;">
+            <select class="search-input" style="min-width:160px;"><option>Todas las sedes</option><option>Sede San Isidro</option><option>Sede Surco</option></select>
+            <span class="btn btn-primary">＋ Nuevo repartidor</span>
+          </div>
+        </div>
+
+        <table class="data-table">
+          <thead><tr><th>Repartidor</th><th>Sede</th><th>Estado</th><th>Entregas hoy</th><th>Calificación</th><th></th></tr></thead>
+          <tbody>
+            <tr>
+              <td style="display:flex; align-items:center; gap:8px;"><div class="avatar" style="width:26px;height:26px;font-size:11px;">CR</div>Carlos Ramírez</td>
+              <td>Sede San Isidro</td>
+              <td><span class="badge badge-entregado">Disponible</span></td>
+              <td>7</td><td>4.9 ★</td>
+              <td><a href="#" style="color:var(--color-primary); font-weight:700;">Ver</a></td>
+            </tr>
+            <tr>
+              <td style="display:flex; align-items:center; gap:8px;"><div class="avatar" style="width:26px;height:26px;font-size:11px;">LM</div>Luis Mendoza</td>
+              <td>Sede San Isidro</td>
+              <td><span class="badge badge-camino">En ruta</span></td>
+              <td>5</td><td>4.7 ★</td>
+              <td><a href="#" style="color:var(--color-primary); font-weight:700;">Ver</a></td>
+            </tr>
+            <tr>
+              <td style="display:flex; align-items:center; gap:8px;"><div class="avatar" style="width:26px;height:26px;font-size:11px;">RS</div>Rosa Salas</td>
+              <td>Sede Surco</td>
+              <td><span class="badge badge-neutral">Desconectado</span></td>
+              <td>0</td><td>4.8 ★</td>
+              <td><a href="#" style="color:var(--color-primary); font-weight:700;">Ver</a></td>
+            </tr>
+            <tr>
+              <td style="display:flex; align-items:center; gap:8px;"><div class="avatar" style="width:26px;height:26px;font-size:11px;">—</div><em style="color:var(--color-text-faint);">Sin repartidores</em></td>
+              <td>Sede Arequipa Centro</td>
+              <td><span class="badge badge-incidencia">Sede sin cobertura</span></td>
+              <td>—</td><td>—</td>
+              <td><a href="#" style="color:var(--color-primary); font-weight:700;">Asignar</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

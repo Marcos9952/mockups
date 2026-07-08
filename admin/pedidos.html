@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin · Pedidos — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <div class="mock-banner">Panel Administrador · Pedidos en tiempo real y reasignación manual · <a href="../index.html">← índice</a></div>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="brand">💧 AguaYa Admin</div>
+      <nav>
+        <a href="dashboard.html"><span class="icon">📊</span>Dashboard</a>
+        <a href="sedes.html"><span class="icon">🏢</span>Sedes</a>
+        <a href="repartidores.html"><span class="icon">🛵</span>Repartidores</a>
+        <a class="active" href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
+        <a href="pagos.html"><span class="icon">💳</span>Pagos</a>
+        <a href="chat.html"><span class="icon">💬</span>Chat</a>
+        <a href="reportes.html"><span class="icon">📈</span>Reportes</a>
+        <a href="configuracion.html"><span class="icon">⚙️</span>Configuración</a>
+      </nav>
+      <div class="sidebar-foot">Sesión: admin@aguaya.pe<br>Rol: Administrador nacional</div>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <div>
+          <h1>Pedidos</h1>
+          <div class="breadcrumb">Vista nacional en tiempo real · mapa + tabla</div>
+        </div>
+        <div class="profile"><div class="avatar">A</div> Admin</div>
+      </div>
+
+      <div class="admin-content">
+        <div class="card" style="margin-bottom:18px;">
+          <div class="map-placeholder" style="min-height:220px;">
+            <div class="pin" style="top:25%; left:35%;">📍</div>
+            <div class="pin" style="top:40%; left:55%;">🛵</div>
+            <div class="pin" style="top:60%; left:70%;">📍</div>
+            <div class="pin" style="top:55%; left:20%;">⚠️</div>
+            Mapa nacional de pedidos activos
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <input class="search-input" type="text" placeholder="🔍 Buscar por N° de pedido o cliente...">
+          <div style="display:flex; gap:8px;">
+            <select class="search-input"><option>Todos los estados</option><option>Pendiente</option><option>Sin asignar</option><option>En camino</option></select>
+          </div>
+        </div>
+
+        <table class="data-table">
+          <thead><tr><th>Pedido</th><th>Cliente</th><th>Sede asignada</th><th>Repartidor</th><th>Estado</th><th>Total</th><th></th></tr></thead>
+          <tbody>
+            <tr>
+              <td>#A-10452</td><td>María López</td><td>Sede San Isidro</td><td>Carlos Ramírez</td>
+              <td><span class="badge badge-camino">En camino</span></td><td>S/ 22.50</td>
+              <td><a href="#" style="color:var(--color-primary); font-weight:700;">Ver</a></td>
+            </tr>
+            <tr style="background:#fef2f2;">
+              <td>#A-10399</td><td>Jorge Salinas</td><td><em style="color:var(--color-danger);">Sin sede (fuera de radio)</em></td><td>—</td>
+              <td><span class="badge badge-incidencia">Requiere acción</span></td><td>S/ 16.00</td>
+              <td><a href="#" style="color:var(--color-danger); font-weight:700;">Reasignar</a></td>
+            </tr>
+            <tr>
+              <td>#A-10440</td><td>Ana Torres</td><td>Sede Arequipa Centro</td><td><em style="color:var(--color-text-faint);">Sin repartidor</em></td>
+              <td><span class="badge badge-pendiente">Esperando repartidor</span></td><td>S/ 30.00</td>
+              <td><a href="#" style="color:var(--color-primary); font-weight:700;">Reasignar</a></td>
+            </tr>
+            <tr>
+              <td>#A-10398</td><td>Pedro Vega</td><td>Sede San Isidro</td><td>Luis Mendoza</td>
+              <td><span class="badge badge-entregado">Entregado</span></td><td>S/ 15.00</td>
+              <td><a href="#" style="color:var(--color-primary); font-weight:700;">Ver</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="card" style="margin-top:18px;">
+          <div class="section-title">Reasignar pedido #A-10399</div>
+          <div class="flow-note">Punto abierto (sección 7 del plan): qué ocurre cuando la sede más cercana no tiene stock/repartidor — aquí se resuelve manualmente mientras se define la regla automática.</div>
+          <div class="two-col" style="grid-template-columns: 1fr 1fr;">
+            <div class="field">
+              <label>Nueva sede</label>
+              <select><option>Sede San Isidro (4.2 km)</option><option>Sede Surco (6.1 km)</option><option>Sede Miraflores (7.8 km)</option></select>
+            </div>
+            <div class="field">
+              <label>Repartidor (opcional, auto si vacío)</label>
+              <select><option>Automático — el sistema asigna</option><option>Carlos Ramírez</option><option>Luis Mendoza</option></select>
+            </div>
+          </div>
+          <span class="btn btn-primary">Confirmar reasignación</span>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

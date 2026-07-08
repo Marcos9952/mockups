@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notificaciones push — todos los perfiles — Mockup</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+  .page-head { max-width: 1100px; margin: 0 auto; padding: 40px 24px 10px; text-align: center; }
+  .page-head h1 { font-size: 26px; margin: 0 0 8px; }
+  .page-head p { color: var(--color-text-muted); font-size: 14px; max-width: 620px; margin: 0 auto; }
+
+  .profiles-grid {
+    max-width: 1240px; margin: 0 auto; padding: 30px 24px 20px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+  }
+  .profile-col { text-align: center; }
+  .profile-col h2 { font-size: 15px; margin: 0 0 3px; }
+  .profile-col .sub { font-size: 12px; color: var(--color-text-muted); margin-bottom: 16px; }
+
+  /* Lock screen look */
+  .lock-shell { display: flex; justify-content: center; }
+  .lock-frame {
+    width: 300px; min-height: 600px;
+    border-radius: 36px; border: 9px solid #111827;
+    box-shadow: var(--shadow-lg); overflow: hidden; position: relative;
+    background: linear-gradient(160deg, #0ea5e9 0%, #075985 55%, #0c1e33 100%);
+  }
+  .lock-notch {
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 110px; height: 20px; background: #111827; border-radius: 0 0 12px 12px; z-index: 5;
+  }
+  .lock-statusbar {
+    display: flex; justify-content: space-between; padding: 10px 20px 0;
+    font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.9);
+  }
+  .lock-clock { text-align: center; color: #fff; margin: 14px 0 4px; }
+  .lock-clock .time { font-size: 46px; font-weight: 300; line-height: 1; }
+  .lock-clock .date { font-size: 12px; opacity: .85; margin-top: 4px; text-transform: capitalize; }
+
+  .notif-stack { padding: 16px 14px 20px; display: flex; flex-direction: column; gap: 8px; }
+  .notif-card {
+    background: rgba(255,255,255,0.94);
+    border-radius: 16px; padding: 10px 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  }
+  .notif-card .n-top { display: flex; align-items: center; gap: 7px; margin-bottom: 3px; }
+  .notif-card .n-icon {
+    width: 20px; height: 20px; border-radius: 6px; flex-shrink: 0;
+    background: var(--color-primary); color: #fff;
+    display: flex; align-items: center; justify-content: center; font-size: 11px;
+  }
+  .notif-card .n-app { font-size: 10px; font-weight: 800; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: .03em; }
+  .notif-card .n-time { font-size: 10px; color: var(--color-text-faint); margin-left: auto; }
+  .notif-card .n-title { font-size: 12.5px; font-weight: 700; color: var(--color-text); margin-bottom: 1px; }
+  .notif-card .n-body { font-size: 11.5px; color: var(--color-text-muted); line-height: 1.35; }
+
+  /* Web / browser toast for Admin */
+  .web-mock { max-width: 1100px; margin: 30px auto 60px; padding: 0 24px; }
+  .browser-frame { border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); }
+  .browser-bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; background: #e2e8f0; }
+  .browser-bar .dot { width: 9px; height: 9px; border-radius: 50%; }
+  .browser-bar .addr { flex: 1; margin-left: 10px; background: #fff; border-radius: 6px; padding: 5px 12px; font-size: 11.5px; color: var(--color-text-faint); }
+  .browser-body { position: relative; background: var(--color-bg); min-height: 320px; }
+
+  .toast {
+    position: absolute; top: 16px; right: 16px; width: 320px;
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); box-shadow: var(--shadow-lg); padding: 14px;
+  }
+  .toast .t-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .toast .t-top .n-icon { width: 22px; height: 22px; border-radius: 6px; background: var(--color-primary); color: #fff; display:flex; align-items:center; justify-content:center; font-size:12px; }
+  .toast .t-site { font-size: 11px; color: var(--color-text-faint); }
+  .toast .t-title { font-size: 13px; font-weight: 700; margin-bottom: 3px; }
+  .toast .t-body { font-size: 12px; color: var(--color-text-muted); line-height: 1.4; }
+  .toast .t-actions { display: flex; gap: 8px; margin-top: 10px; }
+  .toast .t-actions span { font-size: 11.5px; font-weight: 700; color: var(--color-primary); }
+
+  .bell-wrap { position: absolute; top: 64px; right: 40px; }
+  .bell-btn {
+    width: 36px; height: 36px; border-radius: 50%; background: var(--color-surface);
+    border: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center;
+    font-size: 16px; position: relative; box-shadow: var(--shadow-sm);
+  }
+  .bell-btn .dot { position: absolute; top: 4px; right: 5px; width: 8px; height: 8px; border-radius: 50%; background: var(--color-danger); border: 2px solid #fff; }
+  .bell-panel {
+    position: absolute; top: 44px; right: 0; width: 320px;
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); box-shadow: var(--shadow-lg); overflow: hidden;
+  }
+  .bell-panel .bp-head { padding: 12px 14px; border-bottom: 1px solid var(--color-border); font-size: 12.5px; font-weight: 700; }
+  .bell-item { display: flex; gap: 10px; padding: 11px 14px; border-bottom: 1px solid var(--color-border); }
+  .bell-item:last-child { border-bottom: none; }
+  .bell-item .n-icon { width: 24px; height: 24px; border-radius: 7px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #fff; }
+  .bell-item .b-txt { font-size: 12px; line-height: 1.4; }
+  .bell-item .b-time { font-size: 10.5px; color: var(--color-text-faint); margin-top: 2px; }
+
+  @media (max-width: 980px) { .profiles-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div class="mock-banner">Mockup navegable — Notificaciones push en los 4 perfiles · <a href="index.html">← volver al índice</a></div>
+
+  <div class="page-head">
+    <h1>🔔 Notificaciones push</h1>
+    <p>Así se verían las notificaciones en cada perfil: pantalla de bloqueo para las apps móviles (Cliente, Repartidor, Admin Móvil) y notificación de navegador + centro de notificaciones para el Panel Administrador (web).</p>
+  </div>
+
+  <div class="profiles-grid">
+    <div class="profile-col">
+      <h2>📱 App Cliente</h2>
+      <div class="sub">Estado del pedido, mensajes del repartidor, promociones</div>
+      <div class="lock-shell">
+        <div class="lock-frame">
+          <div class="lock-notch"></div>
+          <div class="lock-statusbar"><span>9:41</span><span>🔋 100%</span></div>
+          <div class="lock-clock"><div class="time">9:41</div><div class="date">Miércoles, 8 de julio</div></div>
+          <div class="notif-stack">
+            <div class="notif-card">
+              <div class="n-top"><div class="n-icon">💧</div><span class="n-app">AguaYa</span><span class="n-time">ahora</span></div>
+              <div class="n-title">Pago verificado ✅</div>
+              <div class="n-body">Tu pedido #A-10452 fue confirmado y está en preparación en Sede San Isidro.</div>
+            </div>
+            <div class="notif-card">
+              <div class="n-top"><div class="n-icon">💧</div><span class="n-app">AguaYa</span><span class="n-time">hace 5 min</span></div>
+              <div class="n-title">Carlos va en camino 🛵</div>
+              <div class="n-body">Tu pedido #A-10452 está en camino. Llega en aprox. 15 min.</div>
+            </div>
+            <div class="notif-card">
+              <div class="n-top"><div class="n-icon">💬</div><span class="n-app">AguaYa · Chat</span><span class="n-time">hace 12 min</span></div>
+              <div class="n-title">Carlos Ramírez</div>
+              <div class="n-body">Ya estoy llegando, ¿es el portón verde?</div>
+            </div>
+            <div class="notif-card">
+              <div class="n-top"><div class="n-icon">💧</div><span class="n-app">AguaYa</span><span class="n-time">hace 20 min</span></div>
+              <div class="n-title">¡Pedido entregado! 🎉</div>
+              <div class="n-body">Cuéntanos cómo te fue — califica tu experiencia con Carlos.</div>
+            </div>
+            <div class="notif-card">
+              <div class="n-top"><div class="n-icon">🎁</div><span class="n-app">AguaYa · Promos</span><span class="n-time">ayer</span></div>
+              <div class="n-title">20% de descuento hoy</div>
+              <div class="n-body">En tu próximo pedido de bidones de 20L. Válido hasta las 11:59pm.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-col">
+      <h2>🛵 App Repartidor</h2>
+      <div class="sub">Nuevos pedidos del pool, mensajes de clientes y de administración</div>
+      <div class="lock-shell">
+        <div class="lock-frame" style="background: linear-gradient(160deg, #22c55e 0%, #065f46 55%, #0c1e33 100%);">
+          <div class="lock-notch"></div>
+          <div class="lock-statusbar"><span>9:41</span><span>🔋 92%</span></div>
+          <div class="lock-clock"><div class="time">9:41</div><div class="date">Miércoles, 8 de julio</div></div>
+          <div class="notif-stack">
+            <div class="notif-card">
+              <div class="n-top"><div class="n-icon" style="background:#16a34a;">📦</div><span class="n-app">AguaYa Repartidor</span><span class="n-time">ahora</span></div>
+              <div class="n-title">Nuevo pedido cerca de ti</div>
+              <div class="n-body">#A-10461 a 1.2 km — 2× Bidón 20L. Toca para ver y aceptar.</div>
+            </div>
+            <div class="notif-card">
+              <div class="n-top"><div class="n-icon" style="background:#16a34a;">⚠️</div><span class="n-app">AguaYa Repartidor</span><span class="n-time">hace 2 min</span></div>
+              <div class="n-title">Pedido ya tomado</div>
+              <div class="n-body">El #A-10453 ya fue aceptado por otro repartidor de tu sede.</div>
+            </div>
+            <div class="notif-card">
+              <div class="n-top"><div class="n-icon">💬</div><span class="n-app">Cliente · Chat</span><span class="n-time">hace 8 min</span></div>
+              <div class="n-title">Jorge Paredes</div>
+              <div class="n-body">¿Cuánto falta para que llegues?</div>
+            </div>
+            <div class="notif-card">
+              <div class="n-top"><div class="n-icon">🎧</div><span class="n-app">Administración</span><span class="n-time">hace 15 min</span></div>
+              <div class="n-title">Nuevo mensaje</div>
+              <div class="n-body">Sigue con el pedido #A-10446 cuando puedas, gracias.</div>
+            </div>
+            <div class="notif-card">
+              <div class="n-top"><div class="n-icon" style="background:#16a34a;">🟢</div><span class="n-app">AguaYa Repartidor</span><span class="n-time">8:00 a.m.</span></div>
+              <div class="n-title">¿Listo para hoy?</div>
+              <div class="n-body">Activa tu disponibilidad para empezar a recibir pedidos de tu sede.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-col">
+      <h2>📲 Admin Móvil</h2>
+      <div class="sub">Alertas críticas para actuar aunque no estés frente al panel web</div>
+      <div class="lock-shell">
+        <div class="lock-frame" style="background: linear-gradient(160deg, #64748b 0%, #1e293b 55%, #0c1e33 100%);">
+          <div class="lock-notch"></div>
+          <div class="lock-statusbar"><span>9:41</span><span>🔋 78%</span></div>
+          <div class="lock-clock"><div class="time">9:41</div><div class="date">Miércoles, 8 de julio</div></div>
+          <div class="notif-stack">
+            <div class="notif-card">
+              <div class="n-top"><div class="n-icon" style="background:var(--color-danger);">🔴</div><span class="n-app">AguaYa Admin</span><span class="n-time">ahora</span></div>
+              <div class="n-title">Pedido sin sede</div>
+              <div class="n-body">#A-10399 quedó fuera de todo radio de cobertura. Requiere reasignación manual.</div>
+            </div>
+            <div class="notif-card">
+              <div class="n-top"><div class="n-icon" style="background:var(--color-warning);">⚠️</div><span class="n-app">AguaYa Admin</span><span class="n-time">hace 3 min</span></div>
+              <div class="n-title">Sede sin repartidores</div>
+              <div class="n-body">Sede Arequipa Centro se quedó sin repartidores disponibles — 3 pedidos en espera.</div>
+            </div>
+            <div class="notif-card">
+              <div class="n-top"><div class="n-icon">🧾</div><span class="n-app">AguaYa Admin</span><span class="n-time">hace 10 min</span></div>
+              <div class="n-title">Comprobante por verificar</div>
+              <div class="n-body">Nueva transferencia registrada en el pedido #A-10461 por S/ 40.00.</div>
+            </div>
+            <div class="notif-card">
+              <div class="n-top"><div class="n-icon">💬</div><span class="n-app">Repartidor · Chat</span><span class="n-time">hace 20 min</span></div>
+              <div class="n-title">Luis Mendoza</div>
+              <div class="n-body">¿Puedo tomar mi descanso a las 2pm?</div>
+            </div>
+            <div class="notif-card">
+              <div class="n-top"><div class="n-icon">📊</div><span class="n-app">AguaYa Admin</span><span class="n-time">9:00 a.m.</span></div>
+              <div class="n-title">Resumen de ayer</div>
+              <div class="n-body">412 pedidos completados · S/ 9,840 en ventas · 19 min de entrega promedio.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="web-mock">
+    <h2 class="section-title" style="text-align:center; margin-bottom:4px;">🖥️ Panel Administrador (web)</h2>
+    <p style="text-align:center; font-size:12.5px; color:var(--color-text-muted); margin-top:0; margin-bottom:18px;">
+      En el navegador, las alertas llegan como notificación push del sistema (aunque la pestaña esté cerrada) y quedan registradas en la campanita del panel.
+    </p>
+    <div class="browser-frame">
+      <div class="browser-bar">
+        <span class="dot" style="background:#ef4444;"></span>
+        <span class="dot" style="background:#f59e0b;"></span>
+        <span class="dot" style="background:#22c55e;"></span>
+        <div class="addr">🔒 admin.aguaya.pe/dashboard</div>
+      </div>
+      <div class="browser-body">
+        <div class="toast">
+          <div class="t-top"><div class="n-icon">🔴</div><span class="t-site">admin.aguaya.pe</span></div>
+          <div class="t-title">Pedido #A-10399 sin sede asignada</div>
+          <div class="t-body">Quedó fuera de radio de cobertura — requiere reasignación manual.</div>
+          <div class="t-actions"><span>Ver pedido</span><span style="color:var(--color-text-faint);">Descartar</span></div>
+        </div>
+
+        <div class="bell-wrap">
+          <div class="bell-btn">🔔<span class="dot"></span></div>
+          <div class="bell-panel">
+            <div class="bp-head">Notificaciones (4 nuevas)</div>
+            <div class="bell-item">
+              <div class="n-icon" style="background:var(--color-danger);">🔴</div>
+              <div class="b-txt">Pedido #A-10399 sin sede asignada<div class="b-time">hace 1 min</div></div>
+            </div>
+            <div class="bell-item">
+              <div class="n-icon" style="background:var(--color-warning);">⚠️</div>
+              <div class="b-txt">Sede Arequipa Centro sin repartidores<div class="b-time">hace 3 min</div></div>
+            </div>
+            <div class="bell-item">
+              <div class="n-icon" style="background:var(--color-primary);">🧾</div>
+              <div class="b-txt">Nuevo comprobante por verificar — #A-10461<div class="b-time">hace 10 min</div></div>
+            </div>
+            <div class="bell-item">
+              <div class="n-icon" style="background:#8b5cf6;">💬</div>
+              <div class="b-txt">Luis Mendoza te escribió<div class="b-time">hace 20 min</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hub-foot" style="max-width:900px; margin:0 auto 60px; text-align:center; font-size:12px; color:var(--color-text-faint);">
+    Todas las notificaciones son clicables en el producto final: llevan directo a la pantalla relevante (seguimiento del pedido, chat, verificación de pagos, etc.), tal como ya está enlazado en el resto de estos mockups.
+  </div>
+</body>
+</html>

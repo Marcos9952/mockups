@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin · Configuración — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <div class="mock-banner">Panel Administrador · Catálogo, precios, usuarios y reglas de asignación · <a href="../index.html">← índice</a></div>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="brand">💧 AguaYa Admin</div>
+      <nav>
+        <a href="dashboard.html"><span class="icon">📊</span>Dashboard</a>
+        <a href="sedes.html"><span class="icon">🏢</span>Sedes</a>
+        <a href="repartidores.html"><span class="icon">🛵</span>Repartidores</a>
+        <a href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
+        <a href="pagos.html"><span class="icon">💳</span>Pagos</a>
+        <a href="chat.html"><span class="icon">💬</span>Chat</a>
+        <a href="reportes.html"><span class="icon">📈</span>Reportes</a>
+        <a class="active" href="configuracion.html"><span class="icon">⚙️</span>Configuración</a>
+      </nav>
+      <div class="sidebar-foot">Sesión: admin@aguaya.pe<br>Rol: Administrador nacional</div>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <div>
+          <h1>Configuración</h1>
+          <div class="breadcrumb">Catálogo y precios · reglas de asignación · usuarios y roles</div>
+        </div>
+        <div class="profile"><div class="avatar">A</div> Admin</div>
+      </div>
+
+      <div class="admin-content">
+        <div class="two-col">
+          <div>
+            <div class="card">
+              <div class="section-title">Catálogo y precios</div>
+              <div class="chip" style="margin-bottom:10px;">Precios por sede: activado</div>
+              <table class="data-table">
+                <thead><tr><th>Producto</th><th>Precio base</th><th>Precio Sede San Isidro</th><th></th></tr></thead>
+                <tbody>
+                  <tr><td>Bidón 20L</td><td>S/ 8.00</td><td>S/ 8.00</td><td><a href="#" style="color:var(--color-primary); font-weight:700;">Editar</a></td></tr>
+                  <tr><td>Botella 2.5L</td><td>S/ 3.50</td><td>S/ 3.50</td><td><a href="#" style="color:var(--color-primary); font-weight:700;">Editar</a></td></tr>
+                  <tr><td>Pack x6 botellas</td><td>S/ 15.00</td><td>S/ 15.50</td><td><a href="#" style="color:var(--color-primary); font-weight:700;">Editar</a></td></tr>
+                  <tr><td>Dispensador</td><td>S/ 120.00</td><td>S/ 120.00</td><td><a href="#" style="color:var(--color-primary); font-weight:700;">Editar</a></td></tr>
+                </tbody>
+              </table>
+              <span class="btn btn-secondary btn-sm" style="margin-top:12px;">＋ Agregar producto</span>
+            </div>
+
+            <div class="card">
+              <div class="section-title">Usuarios y roles</div>
+              <table class="data-table">
+                <thead><tr><th>Usuario</th><th>Rol</th><th>Sede</th><th></th></tr></thead>
+                <tbody>
+                  <tr><td>admin@aguaya.pe</td><td>Administrador nacional</td><td>—</td><td><a href="#" style="color:var(--color-primary); font-weight:700;">Editar</a></td></tr>
+                  <tr><td>gerente.lima@aguaya.pe</td><td>Administrador regional</td><td>Lima</td><td><a href="#" style="color:var(--color-primary); font-weight:700;">Editar</a></td></tr>
+                  <tr><td>soporte@aguaya.pe</td><td>Soporte / verificación de pagos</td><td>—</td><td><a href="#" style="color:var(--color-primary); font-weight:700;">Editar</a></td></tr>
+                </tbody>
+              </table>
+              <span class="btn btn-secondary btn-sm" style="margin-top:12px;">＋ Invitar usuario</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="section-title">Reglas de asignación automática</div>
+            <div class="flow-note">Punto abierto (sección 7 del plan): confirmar si la regla considera solo distancia, o también stock y disponibilidad de repartidor.</div>
+
+            <div class="field">
+              <label>Criterio de "sede más cercana"</label>
+              <select>
+                <option>Solo distancia en línea recta</option>
+                <option>Distancia + stock disponible</option>
+                <option>Distancia + stock + repartidor disponible</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Radio máximo de cobertura por defecto (km)</label>
+              <input type="text" value="5">
+            </div>
+            <div class="field">
+              <label>Tiempo límite de respuesta de la sede (min)</label>
+              <input type="text" value="10">
+            </div>
+            <div class="field">
+              <label>Si vence el tiempo límite</label>
+              <select>
+                <option>Reasignar automáticamente a la siguiente sede más cercana</option>
+                <option>Notificar al administrador para reasignar manualmente</option>
+              </select>
+            </div>
+            <span class="btn btn-primary btn-block">Guardar reglas</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

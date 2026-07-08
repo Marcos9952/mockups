@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin · Reportes — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .bar-chart { display: flex; align-items: flex-end; gap: 10px; height: 160px; padding: 10px 4px 0; }
+  .bar-chart .bar { flex: 1; background: var(--color-primary); border-radius: 6px 6px 0 0; position: relative; }
+  .bar-chart .bar .lbl { position: absolute; bottom: -20px; left: 0; right: 0; text-align: center; font-size: 10.5px; color: var(--color-text-faint); }
+  .bar-chart .bar .val { position: absolute; top: -18px; left: 0; right: 0; text-align: center; font-size: 10.5px; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="mock-banner">Panel Administrador · Reportes y estadísticas · <a href="../index.html">← índice</a></div>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="brand">💧 AguaYa Admin</div>
+      <nav>
+        <a href="dashboard.html"><span class="icon">📊</span>Dashboard</a>
+        <a href="sedes.html"><span class="icon">🏢</span>Sedes</a>
+        <a href="repartidores.html"><span class="icon">🛵</span>Repartidores</a>
+        <a href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
+        <a href="pagos.html"><span class="icon">💳</span>Pagos</a>
+        <a href="chat.html"><span class="icon">💬</span>Chat</a>
+        <a class="active" href="reportes.html"><span class="icon">📈</span>Reportes</a>
+        <a href="configuracion.html"><span class="icon">⚙️</span>Configuración</a>
+      </nav>
+      <div class="sidebar-foot">Sesión: admin@aguaya.pe<br>Rol: Administrador nacional</div>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <div>
+          <h1>Reportes y estadísticas</h1>
+          <div class="breadcrumb">Ventas, tiempos de entrega y demanda por sede</div>
+        </div>
+        <div class="profile"><div class="avatar">A</div> Admin</div>
+      </div>
+
+      <div class="admin-content">
+        <div class="toolbar">
+          <div style="display:flex; gap:8px;">
+            <select class="search-input"><option>Últimos 7 días</option><option>Últimos 30 días</option><option>Este mes</option></select>
+            <select class="search-input"><option>Todas las sedes</option><option>Sede San Isidro</option></select>
+          </div>
+          <span class="btn btn-outline">⬇ Exportar CSV</span>
+        </div>
+
+        <div class="card">
+          <div class="section-title">Ventas por día (S/)</div>
+          <div class="bar-chart">
+            <div class="bar" style="height:55%;"><span class="val">4.1k</span><span class="lbl">Lun</span></div>
+            <div class="bar" style="height:70%;"><span class="val">5.3k</span><span class="lbl">Mar</span></div>
+            <div class="bar" style="height:62%;"><span class="val">4.7k</span><span class="lbl">Mié</span></div>
+            <div class="bar" style="height:80%;"><span class="val">6.0k</span><span class="lbl">Jue</span></div>
+            <div class="bar" style="height:95%;"><span class="val">7.1k</span><span class="lbl">Vie</span></div>
+            <div class="bar" style="height:100%; background:var(--color-accent);"><span class="val">7.4k</span><span class="lbl">Sáb</span></div>
+            <div class="bar" style="height:68%;"><span class="val">5.1k</span><span class="lbl">Dom</span></div>
+          </div>
+        </div>
+
+        <div class="two-col" style="margin-top:16px;">
+          <div class="card">
+            <div class="section-title">Sedes con más demanda</div>
+            <table class="data-table">
+              <thead><tr><th>Sede</th><th>Pedidos</th><th>Ventas</th></tr></thead>
+              <tbody>
+                <tr><td>Sede San Isidro</td><td>412</td><td>S/ 9,840</td></tr>
+                <tr><td>Sede Surco</td><td>355</td><td>S/ 8,120</td></tr>
+                <tr><td>Sede Trujillo Norte</td><td>231</td><td>S/ 5,470</td></tr>
+                <tr><td>Sede Arequipa Centro</td><td>198</td><td>S/ 4,690</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card">
+            <div class="section-title">Tiempos de entrega promedio</div>
+            <table class="data-table">
+              <thead><tr><th>Sede</th><th>Prom.</th><th>Meta</th></tr></thead>
+              <tbody>
+                <tr><td>Sede San Isidro</td><td>19 min</td><td>✅ dentro de meta</td></tr>
+                <tr><td>Sede Surco</td><td>24 min</td><td>✅ dentro de meta</td></tr>
+                <tr><td>Sede Trujillo Norte</td><td>33 min</td><td>⚠️ sobre meta</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

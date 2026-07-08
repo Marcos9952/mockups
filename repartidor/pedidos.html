@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Repartidor · Pedidos disponibles — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+  .order-card { display: block; }
+  .order-card .top-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .order-card .id { font-weight: 800; font-size: 13.5px; }
+  .order-card .addr { font-size: 12.5px; color: var(--color-text-muted); display: flex; gap: 6px; align-items: flex-start; margin-bottom: 6px; }
+  .order-card .meta-row { display: flex; justify-content: space-between; font-size: 11.5px; color: var(--color-text-faint); margin-top: 8px; }
+  .order-card .card-link { display: block; text-decoration: none; color: inherit; }
+</style>
+</head>
+<body>
+  <div class="mock-banner">App Repartidor · Pool de pedidos disponibles por sede · <a href="../index.html">← índice</a></div>
+  <div class="phone-shell">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-statusbar"><span>9:41</span><span>🔋 100%</span></div>
+      <div class="phone-body">
+        <div class="app-header">
+          <div>
+            <h1>Carlos Ramírez</h1>
+            <div class="app-header-sub">Sede San Isidro · 6 repartidores en línea</div>
+          </div>
+          <span class="badge badge-entregado">🟢 Disponible</span>
+        </div>
+
+        <div class="app-content" style="padding-bottom:90px;">
+          <div class="flow-note">
+            Tu sede tiene 6 repartidores activos. Los pedidos nuevos se ofrecen a todos a la vez — el primero en presionar "Aceptar" se lo queda y desaparece de la lista de los demás.
+          </div>
+
+          <div class="tabs">
+            <a class="active" href="#">Disponibles (2)</a>
+            <a href="#">En curso (3)</a>
+            <a href="#">Completados</a>
+          </div>
+
+          <a class="card order-card" href="detalle.html" style="border-color:var(--color-primary);">
+            <div class="top-row">
+              <span class="id">#A-10452</span>
+              <span class="badge badge-pendiente">Nuevo · pool</span>
+            </div>
+            <div class="addr">📍 Av. Los Álamos 123, San Isidro — depto 402</div>
+            <div class="meta-row">
+              <span>2× Bidón 20L, 1× Botella 2.5L</span>
+              <span>🕓 1.8 km</span>
+            </div>
+            <div class="meta-row" style="margin-top:2px;">
+              <span>👀 4 de 6 repartidores viendo este pedido</span>
+              <span></span>
+            </div>
+            <div style="display:flex; gap:8px; margin-top:12px;">
+              <span class="btn btn-danger btn-sm" style="flex:1;">Rechazar</span>
+              <span class="btn btn-success btn-sm" style="flex:1;">Aceptar</span>
+            </div>
+          </a>
+
+          <a class="card order-card" href="detalle.html">
+            <div class="top-row">
+              <span class="id">#A-10453</span>
+              <span class="badge badge-pendiente">Nuevo · pool</span>
+            </div>
+            <div class="addr">📍 Jr. Las Camelias 88, San Isidro</div>
+            <div class="meta-row">
+              <span>1× Pack x6 botellas</span>
+              <span>🕓 2.4 km</span>
+            </div>
+            <div class="meta-row" style="margin-top:2px;">
+              <span>👀 2 de 6 repartidores viendo este pedido</span>
+              <span></span>
+            </div>
+          </a>
+
+          <h2 class="section-title" style="margin-top:18px;">En curso — pendientes de entrega (3)</h2>
+          <div class="flow-note">
+            Mientras un pedido esté aceptado y no marcado como "Entregado", puedes chatear o llamar al cliente directamente desde esta lista.
+          </div>
+
+          <div class="card order-card">
+            <a class="card-link" href="detalle.html">
+              <div class="top-row">
+                <span class="id">#A-10449</span>
+                <span class="badge badge-camino">En camino</span>
+              </div>
+              <div class="addr">📍 Calle Chinchón 210, San Isidro</div>
+              <div class="meta-row">
+                <span>3× Bidón 20L · Jorge Paredes</span>
+                <span>Aceptado 09:52 a.m.</span>
+              </div>
+            </a>
+            <div style="display:flex; gap:8px; margin-top:10px;">
+              <a class="btn btn-secondary btn-sm" style="flex:1;" href="chat.html">💬 Chatear</a>
+              <a class="btn btn-outline btn-sm" style="flex:1;" href="tel:+51911223344">📞 Llamar</a>
+            </div>
+          </div>
+
+          <div class="card order-card">
+            <a class="card-link" href="detalle.html">
+              <div class="top-row">
+                <span class="id">#A-10446</span>
+                <span class="badge badge-asignado">En cola</span>
+              </div>
+              <div class="addr">📍 Av. Rivera Navarrete 501, San Isidro</div>
+              <div class="meta-row">
+                <span>1× Pack x6 botellas · Ana Bravo</span>
+                <span>Aceptado 09:45 a.m.</span>
+              </div>
+            </a>
+            <div style="display:flex; gap:8px; margin-top:10px;">
+              <a class="btn btn-secondary btn-sm" style="flex:1;" href="chat.html">💬 Chatear</a>
+              <a class="btn btn-outline btn-sm" style="flex:1;" href="tel:+51922334455">📞 Llamar</a>
+            </div>
+          </div>
+
+          <div class="card order-card">
+            <a class="card-link" href="detalle.html">
+              <div class="top-row">
+                <span class="id">#A-10441</span>
+                <span class="badge badge-asignado">En cola</span>
+              </div>
+              <div class="addr">📍 Jr. Miguel Dasso 210, San Isidro</div>
+              <div class="meta-row">
+                <span>2× Bidón 20L · Sandra Ochoa</span>
+                <span>Aceptado 09:30 a.m.</span>
+              </div>
+            </a>
+            <div style="display:flex; gap:8px; margin-top:10px;">
+              <a class="btn btn-secondary btn-sm" style="flex:1;" href="chat.html">💬 Chatear</a>
+              <a class="btn btn-outline btn-sm" style="flex:1;" href="tel:+51933445566">📞 Llamar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-nav">
+          <a class="active" href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
+          <a href="mapa.html"><span class="icon">🗺️</span>Mapa</a>
+          <a href="chat-admin.html"><span class="icon">🎧</span>Admin</a>
+          <a href="metricas.html"><span class="icon">📊</span>Métricas</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

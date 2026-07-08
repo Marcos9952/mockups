@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin · Pagos — Mockup</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <div class="mock-banner">Panel Administrador · Verificación y conciliación de pagos · <a href="../index.html">← índice</a></div>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="brand">💧 AguaYa Admin</div>
+      <nav>
+        <a href="dashboard.html"><span class="icon">📊</span>Dashboard</a>
+        <a href="sedes.html"><span class="icon">🏢</span>Sedes</a>
+        <a href="repartidores.html"><span class="icon">🛵</span>Repartidores</a>
+        <a href="pedidos.html"><span class="icon">📦</span>Pedidos</a>
+        <a class="active" href="pagos.html"><span class="icon">💳</span>Pagos</a>
+        <a href="chat.html"><span class="icon">💬</span>Chat</a>
+        <a href="reportes.html"><span class="icon">📈</span>Reportes</a>
+        <a href="configuracion.html"><span class="icon">⚙️</span>Configuración</a>
+      </nav>
+      <div class="sidebar-foot">Sesión: admin@aguaya.pe<br>Rol: Administrador nacional</div>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <div>
+          <h1>Pagos</h1>
+          <div class="breadcrumb">Verificación de comprobantes y conciliación</div>
+        </div>
+        <div class="profile"><div class="avatar">A</div> Admin</div>
+      </div>
+
+      <div class="admin-content">
+        <div class="flow-note">Punto abierto (sección 7 del plan): definir si la verificación es automática vía agregador (Culqi/Niubiz/Izipay) para Yape/Plin/tarjeta, o manual para transferencias. Esta pantalla cubre el caso manual mientras se cierra ese punto.</div>
+
+        <div class="kpi-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="kpi-card"><div class="kpi-label">Verificados hoy</div><div class="kpi-value">312</div></div>
+          <div class="kpi-card"><div class="kpi-label">Pendientes de revisión</div><div class="kpi-value" style="color:var(--color-warning);">5</div></div>
+          <div class="kpi-card"><div class="kpi-label">Rechazados hoy</div><div class="kpi-value" style="color:var(--color-danger);">1</div></div>
+        </div>
+
+        <div class="tabs" style="max-width:420px;">
+          <a class="active" href="#">Pendientes (5)</a>
+          <a href="#">Verificados</a>
+          <a href="#">Rechazados</a>
+        </div>
+
+        <div class="two-col">
+          <table class="data-table">
+            <thead><tr><th>Pedido</th><th>Cliente</th><th>Método</th><th>Monto</th><th>Comprobante</th></tr></thead>
+            <tbody>
+              <tr style="background:var(--color-primary-light);">
+                <td>#A-10461</td><td>Rosa Díaz</td><td>Transferencia</td><td>S/ 40.00</td><td><a href="#" style="color:var(--color-primary); font-weight:700;">Ver imagen</a></td>
+              </tr>
+              <tr><td>#A-10458</td><td>Iván Castro</td><td>Transferencia</td><td>S/ 18.00</td><td><a href="#" style="color:var(--color-primary); font-weight:700;">Ver imagen</a></td></tr>
+              <tr><td>#A-10455</td><td>Gina Robles</td><td>Yape (manual)</td><td>S/ 26.00</td><td><a href="#" style="color:var(--color-primary); font-weight:700;">Ver imagen</a></td></tr>
+              <tr><td>#A-10450</td><td>Marco Ríos</td><td>Transferencia</td><td>S/ 60.00</td><td><a href="#" style="color:var(--color-primary); font-weight:700;">Ver imagen</a></td></tr>
+              <tr><td>#A-10447</td><td>Lucía Vera</td><td>Transferencia</td><td>S/ 22.00</td><td><a href="#" style="color:var(--color-primary); font-weight:700;">Ver imagen</a></td></tr>
+            </tbody>
+          </table>
+
+          <div class="card">
+            <div class="section-title">Revisar comprobante — #A-10461</div>
+            <div style="background:var(--color-bg); border-radius:var(--radius-sm); min-height:180px; display:flex; align-items:center; justify-content:center; color:var(--color-text-faint); font-size:12.5px; margin-bottom:14px;">
+              🧾 Vista previa del comprobante subido
+            </div>
+            <div style="font-size:12.5px; color:var(--color-text-muted); margin-bottom:14px;">
+              Cliente: Rosa Díaz · Monto declarado: S/ 40.00 · Banco: BCP · Hora: 11:02 a.m.
+            </div>
+            <div style="display:flex; gap:8px;">
+              <span class="btn btn-danger btn-block">Rechazar</span>
+              <span class="btn btn-success btn-block">Verificar pago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

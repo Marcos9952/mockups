@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mockups — App Pedidos de Agua</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+  .hub { max-width: 980px; margin: 0 auto; padding: 56px 24px 80px; }
+  .hub-head { text-align: center; margin-bottom: 40px; }
+  .hub-head h1 { font-size: 28px; margin: 0 0 8px; }
+  .hub-head p { color: var(--color-text-muted); font-size: 14.5px; max-width: 560px; margin: 0 auto; }
+  .hub-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .hub-card {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg); padding: 28px 22px; text-align: center;
+    box-shadow: var(--shadow-sm); transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .hub-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .hub-card .emoji { font-size: 40px; margin-bottom: 14px; }
+  .hub-card h2 { font-size: 16.5px; margin: 0 0 8px; }
+  .hub-card p { font-size: 12.5px; color: var(--color-text-muted); margin: 0 0 18px; line-height: 1.5; min-height: 54px; }
+  .hub-card .screens { font-size: 11px; color: var(--color-text-faint); margin-top: 14px; text-align: left; }
+  .hub-card .screens li { padding: 2px 0; }
+  .hub-foot { text-align: center; margin-top: 48px; font-size: 12px; color: var(--color-text-faint); }
+  .hub-card.compact { padding: 22px 18px; }
+  @media (max-width: 1000px) { .hub-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .hub-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div class="mock-banner">Mockup navegable — Fase 0: Descubrimiento y Diseño · basado en <code>plan/Plan-Proyecto-App-Pedidos-Agua.md</code></div>
+
+  <div class="hub">
+    <div class="hub-head">
+      <h1>💧 App de Pedidos de Agua a Domicilio</h1>
+      <p>Wireframes navegables de las 3 interfaces del alcance inicial. Todo el contenido es de ejemplo — el objetivo es validar flujos y pantallas antes de pasar a diseño final en Figma y desarrollo.</p>
+    </div>
+
+    <div class="hub-grid">
+      <a class="hub-card" href="cliente/login.html">
+        <div class="emoji">📱</div>
+        <h2>App Cliente</h2>
+        <p>Pedidos, ubicación de entrega, pago, seguimiento en tiempo real y chat con la sede.</p>
+        <ul class="screens">
+          <li>· Login / Registro</li>
+          <li>· Catálogo y ubicación</li>
+          <li>· Carrito y checkout</li>
+          <li>· Mis pedidos: histórico + activos (chat/llamada por pedido pendiente)</li>
+          <li>· Detalle/seguimiento de un pedido (al hacer clic en uno pendiente)</li>
+        </ul>
+      </a>
+
+      <a class="hub-card" href="repartidor/login.html">
+        <div class="emoji">🛵</div>
+        <h2>App Repartidor</h2>
+        <p>Pedidos asignados por sede, mapa de ruta y actualización de estado de entrega.</p>
+        <ul class="screens">
+          <li>· Login</li>
+          <li>· Listado de pedidos</li>
+          <li>· Detalle de pedido + estado</li>
+          <li>· Mapa: puntos de entrega + mi ubicación</li>
+          <li>· Chat con el administrador</li>
+          <li>· Métricas propias</li>
+        </ul>
+      </a>
+
+      <a class="hub-card" href="admin/login.html">
+        <div class="emoji">🖥️</div>
+        <h2>Panel Administrador</h2>
+        <p>Gestión nacional de sedes, repartidores, pedidos, pagos y reportes.</p>
+        <ul class="screens">
+          <li>· Login</li>
+          <li>· Dashboard</li>
+          <li>· Sedes</li>
+          <li>· Repartidores</li>
+          <li>· Pedidos y reasignación</li>
+          <li>· Verificación de pagos</li>
+          <li>· Chat con repartidores (lista de contactos)</li>
+          <li>· Reportes</li>
+        </ul>
+      </a>
+
+      <a class="hub-card" href="admin-movil/login.html">
+        <div class="emoji">📲</div>
+        <h2>Admin Móvil</h2>
+        <p>Versión resumida para el administrador en la calle: alertas, pedidos urgentes, chat y pagos.</p>
+        <ul class="screens">
+          <li>· Login</li>
+          <li>· Dashboard resumido</li>
+          <li>· Pedidos que requieren acción</li>
+          <li>· Chat con repartidores</li>
+          <li>· Verificación rápida de pagos</li>
+        </ul>
+      </a>
+
+      <a class="hub-card" href="notificaciones.html">
+        <div class="emoji">🔔</div>
+        <h2>Notificaciones push</h2>
+        <p>Cómo se ven las notificaciones en los 4 perfiles: pantalla de bloqueo y navegador.</p>
+        <ul class="screens">
+          <li>· App Cliente</li>
+          <li>· App Repartidor</li>
+          <li>· Admin Móvil</li>
+          <li>· Panel Admin (web + campanita)</li>
+        </ul>
+      </a>
+    </div>
+
+    <div class="hub-foot">
+      Puntos abiertos a validar con el cliente antes de cerrar diseño: regla de "sede más cercana", rol del "vendedor" en el chat, y verificación automática vs. manual de pagos.
+    </div>
+  </div>
+</body>
+</html>
